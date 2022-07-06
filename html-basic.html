@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <h1>lorem</h1>
   <h2>Lorem,ipsum.</h2>
@@ -17,16 +19,16 @@
     eum.</p>
 
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quasi?</p>
-<!-- 新窗口打开链接 -->
+  <!-- 新窗口打开链接 -->
   <a target="_blank" href="https://www.jd.com/">在新窗口打开京东</a>
 
   <!-- 发送邮件 -->
   <a href="mailto:xxxxx@qq.com">点我发邮件</a>
 
-    <!-- 在网页最下面设置个id=dibu -->
+  <!-- 在网页最下面设置个id=dibu -->
   <a href="#dibu">跳到页面底部</a>
 
-    <!--使用download  -->
+  <!--使用download  -->
   <a href="aaaa" download="aaa.pdf">点我下载文件</a>
 
   <div>
@@ -38,7 +40,7 @@
 
   <hr>
   <hr>
-<!-- 自动播图 -->
+  <!-- 自动播图 -->
   <marquee>piao</marquee>
 
   <div>
@@ -49,18 +51,19 @@
     <i>这个？</i> <!-- 斜体 -->
   </div>
 
-   &lt;!-- 这段注释需要出现在页面里面 --&gt;
+  &lt;!-- 这段注释需要出现在页面里面 --&gt;
 
   <p></p>
 
   <p></p>
-<!-- 文本格式化 pre -->
-<!-- 计算机代码文本code -->
+  <!-- 文本格式化 pre -->
+  <!-- 计算机代码文本code -->
   <pre><code>
         function a() {
           return 8
         }
-      </code></pre>
+      </code>
+    </pre>
 
   <hr>
   <!-- 无序列表标签 -->
@@ -84,7 +87,7 @@
   </ul>
 
   <hr>
-<!-- 有序列表标签 -->
+  <!-- 有序列表标签 -->
   <dl>
     <dt>班级</dt>
     <dd>三年二班</dd>
@@ -102,7 +105,7 @@
   <hr>
 
   <h2>Google搜索</h2>
-<!--form action 提交表单 利用hidden隐藏属性 -->
+  <!--form action 提交表单 利用hidden隐藏属性 -->
   <form target="_blank" action="https://www.google.com.hk/search">
 
     <input type="text" name="q">
@@ -113,7 +116,7 @@
   </form>
 
   <hr>
-<!-- 表单 嵌套无序列表 +下拉框select>option hidden隐藏请选择 -->
+  <!-- 表单 嵌套无序列表 +下拉框select>option hidden隐藏请选择 -->
   <form action="">
     <p>个人信息调查表</p>
     <dl>
@@ -138,7 +141,8 @@
           </optgroup>
           <optgroup label="少年">
             <option value="1-6">1到6岁</option>
-            <option value="6-12">6到12岁</option>
+            <option value="6-12">6到12岁
+            <option>
           </optgroup>
         </select>
       </dd>
@@ -218,26 +222,28 @@
   </table>
 
   <hr>
-
+  <!-- 图片 -->
   <img usemap="#map1" width=300
-    src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" alt="">
-
+    src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" alt="猫头鹰">
+  <!--定位图片可触碰链接 rect矩形 circle圓型 -->
   <map name="map1">
-    <area shape="rect" coords="202 196 56 105" href="https://www.jd.com/" target="_blank" alt="">
-    <area shape="circle" coords="152 308 150" href="https://www.jd.com/" target="_blank" alt="">
+    <area shape="rect" coords="202 196 56 105" href="https://www.jd.com/" target="_blank" alt="" title="猫头鹰">
+    <area shape="circle" coords="152 308 150" href="https://www.jd.com/" target="_blank" alt="" title="猫头鹰">
   </map>
 
   <hr>
-<!-- <iframe>标记指定一个内联框架。 -->
+  <!-- <iframe>标记指定一个内联框架。 -->
   <a target="bottom-frame" href="https://www.mi.com/">小米</a>
   <div></div>
+  <!-- frameborder 设置边框1或者0  -->
   <iframe name="bottom-frame" src="https://www.nodejs.org/" frameborder="1"></iframe>
 
   <div>aaa&nbsp;&nbsp;&nbsp;&nbsp;bbbbb</div>
 
   <pre>aaa      bbbbb</pre>
-
+<!-- dibu反向 -->
   >>>>>>>>>>>>>>>>>>>>>>&lt;<<<<<<<<<<<<<<<<<< &lt;span&gt;&lt;/span&gt; <div id="dibu">
     </div>
 </body>
+
 </html>
