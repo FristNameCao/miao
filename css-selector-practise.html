@@ -11,6 +11,10 @@
       color: red;
     }
 
+    [tabindex="1"]:focus {
+      color: blue;
+    }
+
     p.a:hover {
       color: red;
     }
@@ -20,9 +24,6 @@
     }
 
 
-    [tabindex="1"]:focus {
-      color: blue;
-    }
 
     /* 按钮颜色 */
 
@@ -79,9 +80,10 @@
     div.b li:nth-child(-n+50):nth-child(n+35) {
       color: blue;
     }
-     .prime li:not(:nth-child(7n + 49)):not(:nth-child(5n + 25)):not(:nth-child(3n + 9)):not(:nth-child(2n + 4)):not(:first-child) {
-       color:pink;
-      }
+
+    .prime li:not(:nth-child(7n + 49)):not(:nth-child(5n + 25)):not(:nth-child(3n + 9)):not(:nth-child(2n + 4)):not(:first-child) {
+      color: pink;
+    }
   </style>
 </head>
 
