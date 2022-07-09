@@ -34,10 +34,16 @@
       0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red;
     }
 
-    /* 文本框字体转换大写 */
-    p.b input {
 
-      text-transform: uppercase;
+    p.b  {
+
+      font-size: 36px;
+    }
+     /* 文本框字体转换大写 */
+    p.b input{
+
+          text-transform: uppercase;
+           font: inherit;
     }
 
     /* 字体类型 首字母大写 所有小号字母转小号大写 */
@@ -49,28 +55,46 @@
 
     /* 字体倾斜 */
     p.a {
-      font-style: oblique;
-      /* font-style: italic; */
+      /* font-style: oblique; */
+      font-style: italic;
 
     }
 
     /* 字体颜色 下划线 */
     p.a b span {
-      color: rgb(255, 0, 255);
-      text-decoration: underline;
-    }
 
+      color: rgb(255, 0, 255);
+      text-decoration: underline solid red;
+    }
+    p.a b span::before{
+      content: ' aaa ';
+
+
+    }
+    p.a b span::after{
+      content: ' aaa';
+
+    }
+    p.a{
+
+       font-size: 32px;
+      font-style: italic;
+      text-align: right;
+
+
+    }
     /* 下划线+头斜线 */
     p.a span {
 
       text-decoration: line-through underline;
+
 
     }
 
     /* 两边间距 缩进 空格间距 字母间距 行高 */
     p.d {
       text-align: justify;
-      /* text-indent: 2em; */
+      text-indent: 2em;
       letter-spacing: 5px;
       word-spacing: 10px;
       line-height: 2;
