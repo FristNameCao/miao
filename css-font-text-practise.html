@@ -34,12 +34,12 @@
       0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red;
     }
 
-
+   /* 字体大小*/
     p.b  {
 
       font-size: 36px;
     }
-     /* 文本框字体转换大写 */
+     /* 文本框字体转换大写 继承样式 */
     p.b input{
 
           text-transform: uppercase;
@@ -66,15 +66,18 @@
       color: rgb(255, 0, 255);
       text-decoration: underline solid red;
     }
+    /* 伪类之前添加 */
     p.a b span::before{
       content: ' aaa ';
 
 
     }
+     /* 伪类之后添加 */
     p.a b span::after{
       content: ' aaa';
 
     }
+    /* 倾斜 右对齐 */
     p.a{
 
        font-size: 32px;
@@ -99,7 +102,7 @@
       word-spacing: 10px;
       line-height: 2;
     }
-    /* 字号百分比 继承样式 */
+    /* 字号百分比 取消继承样式 */
     p.c span {
       font-size: 150%;
         /* all: revert; */
