@@ -6,105 +6,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{
+    ul{
+      list-style: none;
+    }
+    html{
       margin: 0;
       padding: 0;
-
+        height: 100%;
+      width: 100%;
     }
-
-    .bigbox{
-
-      display: flex;
-      height: 100vh;
-      max-width: 1920px;
-      min-width: 500px;
-
-       /* margin-top: calc(-100vh + 80px); */
+    body{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
     }
+    .box{
+     padding: 0%;
+      font-size: 0px;
+      min-width: 900px;
+      width: 100%;
+      margin: auto;
 
+      height: 100%;
+    }
     .onebox{
-      background-color: pink;
-      width: 200px;
-      min-width: 200px;
+
+      font-size: 16px;
       height: 100vh;
-      overflow: auto;
-      box-sizing: border-box;
-}
-      /* box-sizing: border-box;
-      height: calc(100%-80px);
       width: 200px;
-      border: 1px solid black;
+      display: inline-block;
       overflow: auto;
-    } */
-    dl {
-       height: calc(100% - 30px);
-    }
-    ul{
-
-      list-style: none;
-      margin-left: 41px;
-    }
-    .twobox{
-
-      background-color: rgb(255,248,220);
+      background-color: pink;
+      border: 1px solid black;
       box-sizing: border-box;
-       overflow: auto;
-       height: 100vh;
-      border: 1px solid black;
-      min-width: 325px;
-      max-width: 1320px;
-
-
     }
-    .threebox{
-      background-color: pink;
-       height: calc(100%-200px);
-       border: 1px solid black;
-       overflow: auto;
-        width: 200px;
-       min-width: 200px;
+      .twobox{
+      vertical-align: top;
+      font-size: 16px;
+      height: 100vh;
+      width: calc(100% - 600px);
+      overflow: auto;
+      background-color: rgb(255, 248, 220);
       border: 1px solid black;
-
+      box-sizing: border-box;
+      display: inline-block;
     }
-    .fourbox{
-      background-color: pink;
-          border: 1px solid black;
-      height: calc(100%-200px);
-       overflow: auto;
-        width: 200px;
-       min-width: 200px;
+    .twobox span{
+      font-weight: bolder;
+      font-size: 32px;
+      margin-left: 30px;
+        overflow: auto;
 
-      border: 1px solid black;
     }
     hr{
-      background: #000;
+  border-bottom: 1px solid black;
     }
-    .word{
-      font-size: 24px;
-      margin-top: 10px;
-      margin-right: 20px;
+
+    /* ol{
+      display: ;
+    } */
+
+      .threebox{
+      vertical-align: top;
+      display: inline-block;
+      font-size: 32px;
+      height: 100%;
+      width: 200px;
+      min-width: 200px;
+      background-color: pink;
+      border-bottom: 1px solid black;
+       overflow: auto;
+       box-sizing: border-box;
+    }
+      .fourbox{
+        height: 100%;
+        vertical-align: top;
+        overflow: auto;
+        display: inline-block;
+        font-size: 32px;
+        width: 200px;
+      min-width: 200px;
+      background-color: pink;
+        border: 1px solid black;
+        box-sizing: border-box;
     }
     input{
+      box-sizing: border-box;
+      width: 150px;
       height: 30px;
-      width: 155px;
-      margin-top: 30px;
-
     }
-    button{
+   [type=button]{
+      margin: auto;
+      box-sizing: border-box;
       width: 25px;
-      height: 30px;
-      float: right;
-      margin-top: -32px;
+      height: 20px;
+      margin-bottom: -7px;
+    }
+    .onebox span{
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 5px;
+      font-weight: bold;
+      font-size: 24px;
     }
   </style>
 </head>
 <body>
-
-  <div class="bigbox">
-    <div class="onebox">
-      <div class="word"><b>OALD Se7en</b></div>
-      <input type="text"> <button type="button"></button>
-      <ul>
+  <div class="box">
+  <cao class="onebox">
+    <span>
+      OALD Se7en
+      <input type="text"><input type="button"></input>
+    </span>
+     <ul>
         <li><a href="">word1</a></li>
         <li><a href="">word2</a></li>
         <li><a href="">word3</a></li>
@@ -166,41 +181,77 @@
         <li><a href="">word59</a></li>
         <li><a href="">word60</a></li>
       </ul>
-    </div>
-    <div class="twobox">
-      <h1>fantasy</h1>
-      <hr>
-      <dl>
-        <dt>Lorem,ipsurm.
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-          <ol>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</ol>
-        </dt>
-      </dl>
-    </div>
-    <div class="threebox">
-      <h1>Vocabulary</h1>
-    </div>
-    <div class="fourbox">
-      <h1>History</h1>
-    </div>
-  </div>
+  </cao>
+
+  <zhi class="twobox">
+    <span>
+      fantasy
+    </span>
+    <hr>
+    <ol>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum? Odio id error neque ullam?</li>
+    </ol>
+  </zhi>
+
+  <span class="threebox">
+
+      Vocabulary
+
+
+  </span>
+
+  <span class="fourbox">
+   History
+  </span>
+</div>
 </body>
 </html>
