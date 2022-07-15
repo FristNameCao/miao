@@ -1,133 +1,130 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>JS Bin</title>
+    <style>
+      /* 只能在这里写css，不能改变页面的HTML结构 */
+      /* 字体颜色 */
+      h1 span {
+        color: rgb(0, 0, 255);
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-  <style>
-    /* 只能在这里写css，不能改变页面的HTML结构 */
-    /* 字体颜色 */
-    h1 span {
+      /* 阴影和加粗 */
+      h1 {
+        font-size: 200%;
+        font-weight: bold;
+        text-shadow: 1px 1px #808080, 0.5px 0.5px 0px grey, 1px 1px 0px grey,
+          1.5px 1.5px 0px grey, 2px 2px 0px grey, 2.5px 2.5px 0px grey;
+      }
 
-      color: rgb(0, 0, 255);
-    }
+      /* 空心字体 text-shadow 偏移  下垂  模糊半径*/
+      h3 {
+        color: #fff;
+        background-color: #fff;
+        font-size: 315%;
+        text-shadow: 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red,
+          0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red,
+          0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red,
+          0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red,
+          0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red;
+      }
 
-    /* 阴影和加粗 */
-    h1 {
-      font-size: 200%;
-      font-weight: bold;
-      text-shadow: 1px 1px #808080,
-        0.5px 0.5px 0px grey,
-        1px 1px 0px grey,
-        1.5px 1.5px 0px grey,
-        2px 2px 0px grey,
-        2.5px 2.5px 0px grey;
-    }
+      /* 字体大小*/
+      p.b {
+        font-size: 36px;
+      }
+      /* 文本框字体转换大写 继承样式 */
+      p.b input {
+        text-transform: uppercase;
+        font: inherit;
+      }
 
-    /* 空心字体 text-shadow 偏移  下垂  模糊半径*/
-    h3 {
-      color: #fff;
-      background-color: #fff;
-      font-size: 315%;
-      text-shadow: 0 0 1px red,
-      0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red;
-    }
+      /* 字体类型 首字母大写 所有小号字母转小号大写 */
+      h2 {
+        font-family: "comic sans ms", "comic sans", "宋体", "simsun", serif;
+        text-transform: capitalize;
+        font-variant: small-caps;
+      }
 
-   /* 字体大小*/
-    p.b  {
+      /* 字体倾斜 */
+      p.a {
+        /* font-style: oblique; */
+        font-style: italic;
+      }
 
-      font-size: 36px;
-    }
-     /* 文本框字体转换大写 继承样式 */
-    p.b input{
+      /* 字体颜色 下划线 */
+      p.a b span {
+        color: rgb(255, 0, 255);
+        text-decoration: underline solid red;
+      }
+      /* 伪类之前添加 */
+      p.a b span::before {
+        content: " aaa ";
+      }
+      /* 伪类之后添加 */
+      p.a b span::after {
+        content: " aaa";
+      }
+      /* 倾斜 右对齐 */
+      p.a {
+        font-size: 32px;
+        font-style: italic;
+        text-align: right;
+      }
+      /* 下划线+头斜线 */
+      p.a span {
+        text-decoration: line-through underline;
+      }
 
-          text-transform: uppercase;
-           font: inherit;
-    }
-
-    /* 字体类型 首字母大写 所有小号字母转小号大写 */
-    h2 {
-      font-family: "comic sans ms", 'comic sans', '宋体', 'simsun', serif;
-      text-transform: capitalize;
-      font-variant: small-caps;
-    }
-
-    /* 字体倾斜 */
-    p.a {
-      /* font-style: oblique; */
-      font-style: italic;
-
-    }
-
-    /* 字体颜色 下划线 */
-    p.a b span {
-
-      color: rgb(255, 0, 255);
-      text-decoration: underline solid red;
-    }
-    /* 伪类之前添加 */
-    p.a b span::before{
-      content: ' aaa ';
-
-
-    }
-     /* 伪类之后添加 */
-    p.a b span::after{
-      content: ' aaa';
-
-    }
-    /* 倾斜 右对齐 */
-    p.a{
-
-       font-size: 32px;
-      font-style: italic;
-      text-align: right;
-
-
-    }
-    /* 下划线+头斜线 */
-    p.a span {
-
-      text-decoration: line-through underline;
-
-
-    }
-
-    /* 两边间距 缩进 空格间距 字母间距 行高 */
-    p.d {
-      text-align: justify;
-      text-indent: 2em;
-      letter-spacing: 5px;
-      word-spacing: 10px;
-      line-height: 2;
-    }
-    /* 字号百分比 取消继承样式 */
-    p.c span {
-      font-size: 150%;
+      /* 两边间距 缩进 空格间距 字母间距 行高 */
+      p.d {
+        text-align: justify;
+        text-indent: 2em;
+        letter-spacing: 5px;
+        word-spacing: 10px;
+        line-height: 2;
+      }
+      /* 字号百分比 取消继承样式 */
+      p.c span {
+        font-size: 150%;
         /* all: revert; */
+      }
+    </style>
+  </head>
 
-    }
-  </style>
-</head>
+  <body>
+    <h1>大<span>喵</span>教育</h1>
+    <h3>大<span>喵</span>教育</h3>
+    <p class="b">
+      请输入序列号：<input placeholder="我的字号会跟外面一样大" type="text" />
+      <br />
+    </p>
+    <h2>
+      'Returnal' players need to take a break before a bug eats their save files
+      '篝火'玩家需要在游戏的 bug 吃掉他们的存档之前先休息一下
+    </h2>
+    <p class="a">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+      <b><span>suscipit</span></b> doloremque magnam delectus, reiciendis
+      architecto ipsam nihil numquam
+      <span>nesciunt sapiente, accusantium, dolore.</span> Culpa repudiandae
+      incidunt delectus. Officia, veritatis voluptas accusantium.
+    </p>
+    <p class="d">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, autem,
+      ad. Quos fugit quam, vitae doloribus quo quisquam aut iure! Exercitationem
+      ea in voluptatibus a, perspiciatis libero, eum quod? Et!
+    </p>
 
-<body>
-  <h1>大<span>喵</span>教育</h1>
-  <h3>大<span>喵</span>教育</h3>
-  <p class="b">
-    请输入序列号：<input placeholder="我的字号会跟外面一样大" type="text"> <br>
-  </p>
-  <h2>'Returnal' players need to take a break before a bug eats their save files '篝火'玩家需要在游戏的 bug 吃掉他们的存档之前先休息一下</h2>
-  <p class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure <b><span>suscipit</span></b> doloremque
-    magnam delectus, reiciendis architecto ipsam nihil numquam <span>nesciunt sapiente, accusantium, dolore.</span>
-    Culpa repudiandae incidunt delectus. Officia, veritatis voluptas accusantium.</p>
-  <p class="d">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, autem, ad. Quos fugit quam, vitae
-    doloribus quo quisquam aut iure! Exercitationem ea in voluptatibus a, perspiciatis libero, eum quod? Et!</p>
-
-  <p class="c">
-    <span>aa <span>bb <span>cc <span></span>dd</span></span></span>
-  </p>
-
-</body>
-
+    <p class="c">
+      <span
+        >aa
+        <span
+          >bb <span>cc <span></span>dd</span></span
+        ></span
+      >
+    </p>
+  </body>
 </html>

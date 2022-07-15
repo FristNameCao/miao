@@ -1,0 +1,9 @@
+{
+  "editor.unicodeHighlight.nonBasicASCII": "inUntrustedWorkspace",
+  "editor.codeActionsOnSave": {
+
+    "editor.detectIndentation": false,
+    "editor. tabSize": 4,
+
+  }
+}
