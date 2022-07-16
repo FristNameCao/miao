@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        background-color: #1E1E1E;
+      }
+      body {
+
+        width: 100%;
+        margin: auto;
+        border: 1px solid #3C3C3C;
+      }
+      div {
+        padding: 5px;
+        display: inline-block;
+        position: relative;
+        background-color:#3C3C3C;
+        box-sizing: border-box;
+      }
+
+      div ul {
+        list-style: none;
+        position: absolute;
+        left: 0px;
+        width: 200px;
+        white-space: nowrap;
+        box-sizing: border-box;
+        display: none;
+        margin: auto;
+        padding: 0;
+        float: left;
+      }
+      div:hover > ul {
+        display: block;
+      }
+      ul li:hover {
+        position: relative;
+        background-color:  rgb(64, 95, 64);
+      }
+      ul li:nth-child(2) {
+        border-top: 0px solid;
+        border-bottom: 0px solid;
+      }
+      ul li {
+
+        color: rgb(171, 188, 202);
+        background-color:#3C3C3C;
+
+      }
+      ul li:hover > .b {
+        display: block;
+      }
+
+      .b {
+        position: absolute;
+        white-space: nowrap;
+        box-sizing: border-box;
+        display: none;
+        top: 0px;
+        left: 200px;
+        transition-duration: 10s;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      查看
+      <ul>
+        <li>命令面板</li>
+        <li>打开视图...</li>
+        <li>
+          外观
+              <ul class="b">
+                <li>
+                    <li>
+                    全屏F11
+                    </li>
+                    <li>
+                      禅模式 Ctrl+K Z
+                    </li>
+                    <li>
+                      资源管理器 Ctrl+Shift+E
+                    </li>
+                    <li>
+                      居中布局
+                    </li>
+                    <li>
+                      搜索 Ctrl+Shift+F
+                    </li>
+                    <li>
+                      显示菜单栏
+                    </li>
+                    <li>
+                      源代码管理 Ctrl+shift+G
+                    </li>
+                    <li>
+                      显示主侧栏(&:PP) Ctl+B
+                    </li>
+                    <li>
+                    运行 Ctrl+Shift+D
+                  </li>
+                    <li>
+                    显示辅助侧栏
+                    </li>
+                    <li>
+                      扩展Ctrl+shift+X
+                    </li>
+                    <li>
+                      显示状态栏
+                    </li>
+                    <li>
+                      问题 Ctrl+Shift+M
+                    </li>
+                    <li>
+                      显示活动栏
+                    </li>
+                    <li>
+                    输出Ctrl+Shift+U
+
+                  </li>
+                    <li>
+                    显示面板 Cul+J
+                  </li>
+                  <li>
+                    调试控制台 Ctrl+Shift+Y
+                  </li>
+                    <li>
+                    向右移动主侧栏
+                  </li>
+                    <li>
+                    终端 Ctl+
+                  </li>
+                    <li>
+                    面板位置
+
+                  </li>
+                    <li>
+                    自动换行 Alt+Z
+                  </li>
+                  <li>
+                    对齐面板
+                  </li>
+                    <li>
+                    显示缩略图
+                  </li>
+                    <li>
+                    放大 Ctrl+=
+                    </li>
+                    <li>
+                      显示导航痕迹
+                    </li>
+                    <li>
+                      缩小 Ctrl+-
+                    </li>
+                    <li>
+                    显示空格
+                  </li>
+                    <li>
+                      重置缩放
+                    </li>
+                  </li>
+
+            </ul>
+        </li>
+        <li>
+          编辑布局器
+              <ul class="b">
+                  <li>向上拆分</a></li>
+                  <li>向下拆分</li>
+                  <li>向左拆分</li>
+                  <li>向右拆分</li>
+                  <li>在组中拆分Ctrl+K</li>
+                  <li>单列</li>
+                  <li>双列</li>
+                  <li>三列</li>
+                  <li>双行</li>
+                  <li>三行</li>
+                  <li>2x2网格</li>
+                  <li>右侧双行</li>
+                  <li>底部双列</li>
+                  <li>翻转布局Shift+Alt+o</li>
+                  </ul>
+                </li>
+
+        <li>命令面板</li>
+        <li>  查看M转到(G) </li>
+        <li>运行(R)</li>
+        <li>命令面板..</li>
+        <li> Ctrl+ Shift+P</li>
+        <li> 打开视图..</li>
+        <li> 外观</li>
+        <li> 编辑器布局</li>
+        <li> 资源管理器Ctrl+ Shift+E</li>
+        <li> 搜索Ctrl+Shift+F</li>
+        <li> 源代码管理Ctrl+Shift+G</li>
+        <li> 运行Ctrl+Shift+D</li>
+        <li> 扩展Ctrl+Shift+x</li>
+        <li> 问题Ctrl+Shift+M</li>
+        <li> 输出Ctrl+Shift+U</li>
+        <li> 调试控制台Ctrl+ Shift+Y</li>
+        <li> 终端Ctrl+</li>
+        <li> 自动换行Alt+Z</li>
+        <li> 显示缩略图</li>
+        <li> 显示导航痕迹</li>
+        <li> 显示空格</li>
+        <li> 显示控制字符</li>
+      </ul>
+    </div>
+  </body>
+</html>
