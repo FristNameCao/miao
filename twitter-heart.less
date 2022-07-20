@@ -1,19 +1,17 @@
 div {
-
-height: 100px;
-width: 100px;
- background-image: url(twitter-heart.png);
- background-position: 0px 0;
+  height: 100px;
+  width: 100px;
+  background-image: url(twitter-heart.png);
+  background-position: 0px 0;
+  border: 1px solid pink;
 
   &:hover {
-
-    background-position:-2800px 0px;
-     transition: 1s steps(28);
-
-
+    background-position: -2800px 0px;
+    // 没有hover时候就取消用none
+    // transition: none;
+    // hover时候直接1s播放28张图片
+    //  transition: 1s  steps(28);
+    transition: 0.466666666s linear;
     // transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-
-
-
   }
 }
