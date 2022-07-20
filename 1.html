@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="1.less">
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <div class="slide">
+    <!-- 在HTML代码中添加单选按钮，
+      通过单选按钮的选中切换图片，
+      又因为单选按钮无法设置样式，
+      所以使用label标签配合生成圆点样式。 -->
+    <input type="radio" name="pic" id="pic1" checked>
+    <input type="radio" name="pic" id="pic2" >
+    <input type="radio" name="pic" id="pic3" >
+    <input type="radio" name="pic" id="pic4" >
+    <input type="radio" name="pic" id="pic5" >
+    <div class="labels">
+      <label for="pic1"></label>
+       <label for="pic2"></label>
+        <label for="pic3"></label>
+         <label for="pic4"></label>
+          <label for="pic5"></label>
+    </div>
+  <ul class="list">
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+    <li class="item">5</li>
+  </ul>
+  </div>
+</body>
+</html>

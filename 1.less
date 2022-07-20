@@ -1,0 +1,145 @@
+//清除一下默认样式，
+//在root中定义两个变量宽和高，
+//即为轮播图区域的宽高，将轮播图区域水平垂直居中。
+:root {
+  --width: 20rem;
+  --height: 10rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+div.slide {
+  width: var(--width);
+  height: var(--height);
+  border: 0.2rem dashed purple;
+  //隐藏轮播图
+  overflow: hidden;
+  //给input做定位参考
+  position: relative;
+}
+//暂停标签
+
+.slide:hover.list {
+  // animation-play-state: paused;
+  //此时发现之前的暂停动画是不行的，会影响这里的单选选中对应图片的效果，
+  //所以要把之前的暂停动画改为完全清除掉动画
+  animation: none;
+}
+.slide:hover {
+  // 经过手型
+  cursor: pointer;
+}
+.slide:hover>.labels {
+  // 鼠标经过才显示小圆点
+  display: block;
+  display: flex;
+}
+
+//隐藏标签
+input {
+  display: none;
+}
+//定位标签位置
+.labels {
+  position: absolute;
+  bottom: 0.5rem;
+  //层级
+  z-index:1;
+  width: inherit;
+  justify-content: center;
+  display: flex;
+  display: none;
+
+}
+.labels label {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+  border: 0.1rem solid #fff;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+//点击变白色
+input[id="pic1"]:checked ~ .labels label[for="pic1"],
+input[id="pic2"]:checked ~ .labels label[for="pic2"],
+input[id="pic3"]:checked ~ .labels label[for="pic3"],
+input[id="pic4"]:checked ~ .labels label[for="pic4"],
+input[id="pic5"]:checked ~ .labels label[for="pic5"] {
+  background-color: #fff;
+  border: 0.1rem solid #fff;
+}
+//通过单选按钮和图片对应选中当前要显示的图片
+input[id="pic1"]:checked ~ ul.list {
+  transform: translate(calc(0 * var(--width)));
+}
+input[id="pic2"]:checked ~ ul.list {
+  transform: translate(calc(-1 * var(--width)));
+}
+input[id="pic3"]:checked ~ ul.list {
+  transform: translate(calc(-2 * var(--width)));
+}
+input[id="pic4"]:checked ~ ul.list {
+  transform: translate(calc(-3 * var(--width)));
+}
+input[id="pic5"]:checked ~ ul.list {
+  transform: translate(calc(-4 * var(--width)));
+}
+
+
+//给所有图片加背景色、加边框，调整文字大小、颜色、文字水平垂直居中。
+li.item {
+  background-color: maroon;
+  border: 2rem solid pink;
+  font-size: 4rem;
+  color: aliceblue;
+  text-align: center;
+  width: var(--width);
+  height: inherit;
+  box-sizing: border-box;
+  //左浮动
+  float: left;
+}
+ul.list {
+  width: calc(var(--width) * 5);
+  height: inherit;
+  //加边框看下ul.list的宽度
+  // border: .5rem dashed blue;
+}
+//接下来要做的就是通过动画让ul.list水平左移，而外部的div.slide的宽度是固定不变的，
+//再将超出div.slide部分隐藏即可
+//将div.slide置于最上
+ul.list {
+  width: calc(var(--width) * 5);
+  height: inherit;
+  position: relative;
+  z-index: -1;
+  //为了看到完整效果,延时1s
+  animation: move 10s ease 2s infinite;
+}
+@keyframes move {
+  0% {
+    transform: translate(calc(0 * var(--width)));
+  }
+  25% {
+    transform: translate(calc(-1 * var(--width)));
+  }
+  50% {
+    transform: translate(calc(-2 * var(--width)));
+  }
+  75% {
+    transform: translate(calc(-3 * var(--width)));
+  }
+  100% {
+    transform: translate(calc(-4 * var(--width)));
+  }
+}
