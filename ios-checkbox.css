@@ -17,6 +17,9 @@ select {
   border-bottom-right-radius: 20px;
   display: inline-block;
   -webkit-appearance: none;
+  cursor: pointer;
+   transition: 0.5s;
+
 }
 .mui-switch:before {
   content: "";
@@ -33,14 +36,20 @@ select {
   border-bottom-right-radius: 20px;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
 }
 .mui-switch:checked {
-  transition: 0.1s;
+  transform: 1s;
+
   border-color: #64bd63;
   box-shadow: #64bd63 0 0 0 16px inset;
   background-color: #64bd63;
+   border-radius: 50px;
+
 }
 .mui-switch:checked:before {
-  transition: 0.5s;
+  transition: 1s;
   left: 21px;
+  transition:  left 3s ;
+
 }

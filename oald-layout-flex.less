@@ -1,0 +1,132 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+}
+div.nav {
+  font-size: 1.5rem;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  div.nav1 {
+    position: sticky;
+    width: 200px;
+    min-width: 200px;
+    border: 1px solid black;
+    border-bottom: 0px;
+    // flex: 1;
+    background-color: pink;
+    height: 100px;
+    box-sizing: border-box;
+    span {
+      position: absolute;
+      margin: auto;
+      bottom: 0px;
+
+
+
+      button {
+        height: 15px;
+      }
+    }
+  }
+  div.nav2 {
+    border: 1px solid black;
+    background-color: #fff8dc;
+    // flex: 2;
+    min-width: 325px;
+    box-sizing: border-box;
+    //  flex-grow:0.6;
+    width: calc(100% - 600px);
+    min-width: 200px;
+  }
+  div.nav3 {
+    width: 200px;
+    min-width: 200px;
+    border: 1px solid black;
+    border-bottom: 0px;
+    box-sizing: border-box;
+    // flex: 1;
+    //  flex-grow:0.2;
+    //  flex: 200px;
+    background-color: pink;
+  }
+  div.nav4 {
+    width: 200px;
+    min-width: 200px;
+    border: 1px solid black;
+    border-bottom: 0px;
+    min-width: 200px;
+    box-sizing: border-box;
+    flex: 1;
+    //  flex-grow:0.2;
+    background-color: pink;
+
+    //  flex: 200px;
+  }
+}
+
+div.box {
+  display: flex;
+
+  height: calc (100% - 100px);
+  width: 100%;
+  ul {
+    list-style: none;
+  }
+  div.box1 {
+    height: calc(100vh - 100px);
+    overflow: auto;
+    border: 1px solid black;
+    border-top: 0px solid;
+    width: 200px;
+    // flex: 1;
+    // flex-grow:0.2;
+    // flex: 200px;
+    min-width: 200px;
+    background-color: pink;
+    box-sizing: border-box;
+  }
+
+  div.box2 {
+    width: calc(100% - 600px);
+    height: calc(100vh - 100px);
+    overflow: auto;
+    border: 1px solid black;
+    background-color: #fff8dc;
+    // flex: 2;
+    min-width: 325px;
+    box-sizing: border-box;
+    //  flex-grow:0.6;
+
+    min-width: 200px;
+    //  width: calc(100% - 200px;);
+  }
+  div.box3 {
+    width: 200px;
+
+    min-width: 200px;
+    box-sizing: border-box;
+    // flex: 1;
+    //  flex-grow:0.2;
+    //  flex: 200px;
+    background-color: pink;
+    border: 1px solid black;
+    border-top: 0px solid;
+  }
+  div.box4 {
+    width: 200px;
+    min-width: 200px;
+    box-sizing: border-box;
+    // flex: 1;
+    //  flex-grow:0.2;
+
+    background-color: pink;
+    border: 1px solid black;
+    border-top: 0px solid;
+    //  flex: 200px;
+  }
+}
