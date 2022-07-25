@@ -1,0 +1,84 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+div.box {
+  height: 100%;
+  width: 100%;
+  min-width: 943px;
+  box-sizing: border-box;
+}
+div.box div.one {
+  border: 1px solid black;
+  float: left;
+  width: 200px;
+  box-sizing: border-box;
+  background-color: pink;
+}
+div.box div.one .top {
+  height: 100px;
+  font-size: 24px;
+  font-weight: bold;
+}
+div.box div.one .top input {
+  width: 150px;
+  height: 30px;
+  padding: 0;
+}
+div.box div.one .top button {
+  height: 25px;
+  padding-bottom: 5px;
+}
+div.box div.one ul {
+  margin: auto;
+  height: calc(100vh - 100px);
+  display: block;
+  list-style: none;
+  overflow: auto;
+}
+div.box div.two {
+  border: 1px solid black;
+  float: left;
+  width: calc(100% - 600px);
+  min-width: 325px;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #fff8dc;
+}
+div.box div.two .top {
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  font-size: 24px;
+  height: 100px;
+  font-weight: bold;
+}
+div.box div.two span.two2 {
+  height: calc(100vh - 100px);
+  display: block;
+  overflow: auto;
+}
+div.box div.three {
+  border: 1px solid black;
+  width: 200px;
+  min-width: 200px;
+  height: 100%;
+  float: left;
+  background-color: pink;
+  font-size: 24px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+div.box div.four {
+  border: 1px solid black;
+  float: right;
+  width: 200px;
+  min-width: 200px;
+  height: 100%;
+  background-color: pink;
+  font-size: 24px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
