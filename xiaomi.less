@@ -1,59 +1,538 @@
+@font-face {
+  font-family: font;
+  src: url(mao/mifont.woff);
+}
+@font-face {
+  font-family: dh;
+  src: url(mao/mi-font.ttf);
+}
+
 html,
 body {
+  --width: 1226px;
   --height: 40px;
   height: 100%;
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  font-family: font;
+  span[class="zt"] {
+    font-family: "dh";
+    font-size: 24px;
+  }
 }
 
 div.content {
   width: 100%;
   margin: auto;
   padding: 0;
-  justify-content: space-between;
-
   div.headers {
     margin: auto;
     padding: 0;
     width: 100%;
+    height: var(--height);
     background-color: #333333;
+    display: flex;
     div.nav {
+      display: flex;
+      justify-content: space-between;
       margin: auto;
-      padding: 0;
-      width: 1245px;
-      ul {
-        box-sizing: border-box;
-        list-style: none;
-        margin: auto;
-        padding: 0;
-        width: 800px;
-        height: var(--height);
-        margin-left: 0;
-        ul.header {
-          margin: auto;
-          padding-left: 0px;
-          font-size: 12px;
-          li {
-            // display: inline-block;
-            float: left;
-            line-height: var(--height);
-            color: #b0b0b0;
+      padding: 0px;
+      width: var(--width);
 
-            &:not(:last-child)::after {
-              content: " | ";
-              // padding: 15px;
-              color: #424242;
-              padding: 0 5px;
+      background-color: #333333;
+      span[class="sep"] {
+                      /* 小竖线 */
+          width: 1px;
+          height: 40px;
+          // background-color: #b0b0b0;
+          color: #424242;
+          // margin: 15px 7px 0;        /* 上是15 左=右是12 下是0 */
+      }
+      div.header {
+        justify-content: flex-start;
+        padding: 0;
+        background-color: #333333;
+        width: 850px;
+        min-width: 850px;
+        // width: var(--width);
+
+        a {
+          text-decoration: none;
+          font-size: 12px;
+          display: inline-block;
+          line-height: var(--height);
+          color: #b0b0b0;
+          &:hover {
+            color: pink;
+          }
+        }
+        span.lowdown {
+          display: inline-block;
+          position: relative;
+          // 下载APP动画
+          &:hover > .imgs{
+            transition: .6s;
+            height: 140px;
+            cursor: pointer;
+            // z-index: 99;
+          }
+
+          &:hover>.imgsj{
+              transition: .6s;
+              border-left: 10px solid transparent;
+              border-bottom: 10px solid pink;
+              border-top: 0px solid transparent;
+              border-right: 10px solid transparent;
+          }
+           .imgsj {
+              // z-index: 99999999;
+              margin: auto;
+              top: 30px;
+              right: 0;
+              left: 0;
+              position: absolute;
+              width: 0;
+              border-left: 0px solid transparent;
+              border-bottom: 0px solid pink;
+              border-top: 0px solid transparent;
+              border-right: 0px solid transparent;
+            }
+
+          .imgs {
+            overflow: hidden;
+            z-index: 99;
+            position: absolute;
+            transition: .6s;
+            left: -70%;
+            top: 100%;
+            width: 140px;
+            background-color: white;
+            // transition: 2s;
+            // background-image: url(download.png);
+            // display: block;
+
+            height: 0;
+            box-shadow: 0px 2px 5px #333333;
+
+            img{
+                display: block;
+                position: absolute;
+                margin: auto;
+                width: 90px;
+                height: 90px;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+
+            }
+             a{
+            display: inline-block;
+             p {
+              position: absolute;
+              top: 65%;
+              // right: 25%;
+              left: 30%;
+              font-size: 14px;
+              color: #333333;
+              // z-index: 999;
+
+            }
+          }
+
+            // display: none;
+
+          }
+        }
+      }
+    }
+    div.nav2 {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 10px;
+      margin-left: 50px;
+      line-height: var(--height);
+
+      // margin-left: ;
+      // float: right;
+      // width: calc(100% - 850px);
+      min-width: 200px;
+      // height: 40px;
+      // line-height: 40px;
+
+      a {
+        padding: 0 5px;
+        font-size: 12px;
+        line-height: var(--height);
+        color: #b0b0b0;
+        text-decoration: none;
+        &:hover {
+          color: pink;
+        }
+      }
+    }
+    span.shop {
+      position: relative;
+      display: inline-block;
+      margin-right: 0px;
+      width: 120px;
+      height: var(--height);
+      background-color: #424242;
+      //  购物车背景色
+      &:hover {
+        background-color: white;
+
+      }
+      // 此处hover购物车动画
+      &:hover > span.witer {
+        // display: block;
+         height: 100px;
+         transition: .6s;
+      }
+      // 购物车下面的东西
+      span.witer {
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        top: var(--height);
+        // display: none;
+        width: 320px;
+        height: 0px;
+        background-color: pink;
+        box-shadow: 0 2px 5px #424242;
+        div {
+          font-size: 12px;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          // padding: 50%;
+          width: 193px;
+          height: 20px;
+          z-index: 999;
+        }
+      }
+
+      span.shop2 {
+        // display: flex;
+        //  align-items: center;
+        display: inline-block;
+        // margin: auto;
+        // padding: 0px;
+        // background-image: url(img/01.png);
+        // width: 12px;
+        // height: 12px;
+        &:hover > span.zt {
+          color: pink;
+        }
+        // 购物车名字
+        span.zt {
+          margin-left: 30%;
+          // position: absolute;
+          // top: 0;
+          // left: 0px;
+          // right: 0;
+          // bottom: 0;
+          font-size: 20px;
+          line-height: 40px;
+          color: #b0b0b0;
+        }
+        a {
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          text-align: center;
+          font-size: 12px;
+          line-height: 40px;
+          color: #b0b0b0;
+          text-decoration: none;
+          // text-align: center;
+          &:hover {
+            color: pink;
+          }
+        }
+      }
+    }
+  }
+
+  // 第二部分
+  div.headers2 {
+    position: relative;
+    margin: auto;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    // margin-top: 22px;
+    width: 100%;
+    height: 55px;
+    // background-color: #333333;
+    // display: flex;
+    div.header2 {
+      margin: auto;
+      height: 100px;
+      width: var(--width);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      //  justify-content: center;
+
+      // logo
+      justify-content: space-between;
+      .logo-mi1 {
+        position: relative;
+        background-color: pink;
+        width: 56px;
+        height: 62px;
+        // align-self: flex-start;
+        .logo-mi {
+          position: absolute;
+          margin: auto;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 56px;
+          height: 56px;
+        }
+      }
+      // 手机
+      div.header3 {
+        // border: 1px pink solid;
+        display: flex;
+        justify-content: center;
+        // margin-left: -240px;
+        // flex-direction: row;
+        // justify-content: space-around;
+        // align-items: center;
+        // padding: 0;
+        height: 100px;
+        line-height: 100px;
+        width: 950px;
+        min-width: 850px;
+        ul {
+          // border: 1px solid red;
+          list-style: none;
+          li{
+            display: inline-block;
+          // height: 100px;
+          padding: 0 8px;
+          }
+        }
+
+        // {
+        //   display: flex;
+        //   justify-content: space-between;
+        //   margin: auto;
+        //   padding: 0px;
+        //   width: var(--width);
+        // }
+      }
+      // 输入框
+      div.seo {
+        position: relative;
+        margin-left: 0px;
+        // right: 0;
+        width: 300px;
+        height: 50px;
+        div.select {
+          // position: absolute;
+          // top: 0;
+          width: 245px;
+          height: 240px;
+          display: flex;
+          flex-direction: column;
+          border: 1px pink solid;
+          display: none;
+
+          div {
+            //  border: 1px pink solid;
+            height: 30px;
+            margin-left: 15px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #fafafa;
+            }
+
+            a {
+              // margin-top: -10px;
+              margin-top: 5px;
+              text-decoration: none;
+              color: #333333;
             }
           }
         }
-        ul.header2 {
-          display: inline-block;
-          li {
-            line-height: var(--height);
-            color: #b0b0b0;
-            float: right;
+        input {
+          z-index: 0;
+          border-right: none;
+          border-color: #e0e0e0;
+          // border-color: #b0b0b0;
+          width: 245px;
+          height: 50px;
+          box-sizing: border-box;
+        }
+        span.zt {
+          button {
+            font-family: "dh";
+            font-size: 24px;
+            border-color: #e0e0e0;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 245px;
+            right: 0;
+            bottom: 0;
+            width: calc(300px - 245px);
+            height: 50px;
+            &:hover {
+              background-color: pink;
+              color: white;
+            }
+            // top: 0px;
+            // border: #333333 solid 1px;
+          }
+        }
+      }
+    }
+    div.heade2 {
+      margin: auto;
+      padding: 0;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 100px;
+      left: 0;
+      background-color: #ffffff;
+      width: 100%;
+      margin-left: 0px;
+      height: 230px;
+      border-top: 1px #b0b0b0 solid;
+      box-shadow: 0 0 5px #ffffff;
+
+    ul {
+        list-style: none;
+        li{
+        a {
+          text-decoration: none;
+          position: relative;
+          div {
+            position: absolute;
+            margin: auto;
+            top: 100%;
+            left: 40%;
+            right: 0;
+            bottom: 0;
+          }
+        }
+        }
+      }
+    }
+  }
+// 菜单
+  div.menu {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    margin-top: 4%;
+    width: var(--width);
+    height: 460px;
+    // border: 1px solid #424242;
+    box-sizing: border-box;
+     background-color:  #3F3D3D;
+    ul {
+      // margin-top: 0;
+      position: absolute;
+      top: 10px;
+      display: flex;
+      flex-direction: column;
+      // padding:0 1%;
+      // justify-content: space-evenly;
+      width: 234px;
+      list-style: none;
+      background-color: #3F3D3D;
+
+
+       li {
+
+          &:hover{
+        background-color: pink;
+      }
+        // position: absolute;
+        // left: 0;
+        // right: 100%;
+        height: 40px;
+        // width: 234px;
+        padding-right: 0;
+        line-height: 40px;
+        // padding-top: 5px;
+        padding-left: 39px;
+        margin-left: -40px;
+        cursor: pointer;
+        // border: 1px solid black;
+        position: relative;
+        // margin-top: 0px;
+        // padding-top: 2px;
+        color: #fafafa;
+        span.zt{
+          position: absolute;
+          font-size: 16px;
+          right: 18%;
+        }
+
+        &:hover ul {
+          display: block;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+
+        }
+        ul{
+          // display: none;
+          margin-top: -27px;
+          padding: 0;
+          padding-top: 23px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          position: absolute;
+          top: 0px;
+          left: 100%;
+          width: 955px;
+          height: 437px;
+          background-color: #e0e0e0;
+          display: none;
+
+            a{
+              display: block;
+              border: 1px solid pink;
+              width: 223px;
+              height: 40px;
+              // line-height: 40px;
+              // padding-top: -25%;
+              text-decoration: none;
+              font-size: 14px;
+              color: #424242;
+              position: relative;
+              &:hover{
+                color: pink;
+              }
+              span{
+                position: absolute;
+
+              }
+
+
           }
         }
       }

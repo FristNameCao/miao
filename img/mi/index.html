@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mi</title>
+  <link rel="stylesheet" href="my-iconfont.css">
+  <style type="text/less">
+    * {
+      background-color: rgba(0,0,0,0.1);
+      box-shadow: inset 0 0 2px red;
+    }
+
+    body {
+      margin: 0;
+      overflow-y: scroll;
+      font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    }
+    a {
+      text-decoration: none;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .top-black {
+      background-color: #333;
+      height: 40px;
+      .top-black-inner {
+        width: 1226px;
+        height: 40px;
+        margin: auto;
+        /* background-color: pink; */
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+
+        line-height: 40px;
+        color: #424242;
+        a {
+          color: #b0b0b0;
+          display: inline-block;
+          &:hover {
+            color: white;
+          }
+        }
+        .sep {
+          margin: 0 .3em;
+        }
+        .right-links {
+          display: flex;
+          position: relative;
+          > * {
+            position: relative;
+            z-index: 888;
+          }
+          .shopping-cart {
+            width: 120px;
+            xdisplay: inline-block;
+            text-align: center;
+            background-color: #424242;
+            margin-left: 20px;
+            position: relative;
+            &:hover {
+              background-color: white;
+              color: #ff0067;
+            }
+            .icon {
+              vertical-align: bottom;
+            }
+          }
+          .shopping-cart:hover + .shopping-list {
+            height: 100px;
+          }
+          .shopping-list {
+            transition: 0.6s;
+            overflow: hidden;
+            width: 320px;
+            background-color: #fff;
+            position: absolute;
+            z-index: 666;
+            right: 0;
+            top: 100%;
+            height: 0;
+            box-shadow: 0 0 8px black;
+            &:hover {
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+
+    .top-nav {
+      height: 100px;
+      width: 1226px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      .logo {
+        margin-right: 200px;
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+      .product-category {
+        display: flex;
+        > li {
+          font-size: 14px;
+          padding: 0 10px;
+          height: 100px;
+          line-height: 100px;
+          .product-submenu-wrapper {
+            background-color: white;
+            position: absolute;
+            left: 0;
+            overflow: hidden;
+            height: 0;
+            z-index: 555;
+            transition: 1s height, 0s 1s z-index;// 鼠标拿开时让z-index延迟一秒变化
+            width: 100%;
+            ul {
+              display: flex;
+              width: 1226px;
+              margin: auto;
+              li {
+                width: calc(1226px / 6);
+                height: 230px;
+              }
+            }
+          }
+          &:hover .product-submenu-wrapper {
+            z-index: 888;
+            transition: 1s height, 0s  z-index; // 鼠标hover时，z-index必须突变
+          }
+        }
+        &:hover > li .product-submenu-wrapper {
+          height: 230px;
+          transition: 1s height, 0s  z-index; // 鼠标hover时，z-index必须突变
+        }
+      }
+      .search-form {
+        margin-left: auto;
+        display: flex;
+        position: relative;
+        &:hover {
+          input,button {
+            border-color: #b0b0b0;
+          }
+        }
+        /* &:focus-within { // 光标在form里面时
+          input,button {
+            border-color: #ff6700;
+          }
+        } */
+        input {
+          font-size: 16px;
+          width: 245px;
+          height: 50px;
+          box-sizing: border-box;
+          border: 1px solid #e0e0e0;
+          border-right: none;
+          outline: none;
+          &:focus {
+            border-color: #ff6700;
+            + button {
+              border-color: #ff6700;
+            }
+          }
+        }
+        button {
+          width: 50px;
+          height: 50px;
+          border: 1px solid #e0e0e0;
+          font-size: 2em;
+          display: flex;
+          &:hover {
+            background-color: #ff6700;
+            border-color: #ff6700;
+            color: white;
+            cursor: pointer;
+          }
+          .icon {
+            margin: auto;
+          }
+        }
+        .suggestions {
+          position: absolute;
+          display: none;
+          left: 0;
+          top: 100%;
+        }
+        input:focus ~ .suggestions {
+          display: block;
+        }
+      }
+    }
+    .fixed-sidebar {
+      position: fixed;
+      right: 0;
+      bottom: 70px;
+
+      @media (max-width: 1460px) {
+        left: 50%;
+        margin-left: calc(1226px / 2);
+        right: auto;
+      }
+      ul {
+        li {
+          height: 90px;
+          .icon-text {
+            @media (max-width: 1460px) {
+              display: none;
+            }
+          }
+          .icon {
+            display: block;
+            font-size: 3em;
+            @media (max-width: 1460px) {
+              font-size: 2em;
+            }
+          }
+        }
+      }
+    }
+
+    .hero {
+      height: 460px;
+      width: 1226px;
+      margin: auto;
+      position: relative;
+      ul.product-menu {
+        position: absolute;
+        background-color: rgba(0,0,0,0.5);
+        height: 100%;
+        box-sizing: border-box;
+        width: 235px;
+        padding: 20px 0;
+        > li {
+          color: white;
+          height: 42px;
+          line-height: 42px;
+          padding-left: 30px;
+          padding-right: 20px;
+          &::after {
+            content: '\E623';
+            font-family: 图标字体;
+            float: right;
+            font-size: 1.5em;
+          }
+          &:hover .product-menu-sub{
+            display: block;
+          }
+          .product-menu-sub {
+            display: none;
+            position: absolute;
+            height: 460px;
+            xwidth: 248px;
+            left: 100%;
+            top: 0;
+            li {
+              background-color: white;
+              height: calc(460px / 6);
+              width: 248px;
+              color: black;;
+              &:nth-child(n + 7) {
+                margin-left: 248px;
+              }
+              &:nth-child(n + 13) {
+                margin-left: 496px;
+              }
+              &:nth-child(n + 19) {
+                margin-left: 744px;
+              }
+              &:nth-child(6n + 7) {
+                margin-top: -460px;
+              }
+            }
+          }
+        }
+      }
+      div.slider {
+        img {
+          display: block;
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <nav class="top-black">
+      <div class="top-black-inner">
+        <div class="left-links">
+          <a href="#">小米官网</a>
+          <span class="sep">|</span>
+          <a href="#">小米商城</a>
+          <span class="sep">|</span>
+          <a href="#">MIUI</a>
+          <span class="sep">|</span>
+          <a href="#">IoT</a>
+          <span class="sep">|</span>
+          <a href="#">云服务</a>
+          <span class="sep">|</span>
+          <a href="#">天星数科</a>
+          <span class="sep">|</span>
+          <a href="#">有品</a>
+          <span class="sep">|</span>
+          <a href="#">小爱开放平台</a>
+          <span class="sep">|</span>
+          <a href="#">企业团购</a>
+          <span class="sep">|</span>
+          <a href="#">资质证照</a>
+          <span class="sep">|</span>
+          <a href="#">协议规则</a>
+          <span class="sep">|</span>
+          <a href="#">下载app</a>
+          <span class="sep">|</span>
+          <a href="#">Select Location</a>
+        </div>
+        <div class="right-links">
+          <div>
+            <a href="">登陆</a>
+            <span class="sep">|</span>
+            <a href="">注册</a>
+            <span class="sep">|</span>
+            <a href="">消息通知</a>
+          </div>
+          <div class="shopping-cart">
+            <a href="#">
+              <span class="icon icon-shopping-cart"></span> 购物车 (0)
+            </a>
+          </div>
+          <div class="shopping-list">
+            暂无
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="top-nav">
+      <a class="logo" href="/">
+        <img src="https://s02.mifile.cn/assets/static/image/logo-mi2.png" alt="">
+      </a>
+      <ul class="product-category">
+        <li>Xiaomi手机
+          <div class="product-submenu-wrapper">
+            <ul class="product-submenu">
+              <li>aaaa</li>
+              <li>bbbb</li>
+              <li>ccc</li>
+              <li>ddd</li>
+              <li>ddd</li>
+              <li>eeewef</li>
+            </ul>
+          </div>
+        </li>
+        <li>Redmi手机
+          <div class="product-submenu-wrapper">
+            <ul class="product-submenu">
+              <li>eeewef</li>
+              <li>ccc</li>
+              <li>aaaa</li>
+              <li>ddd</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul class="product-category">
+        <li>电视</li>
+        <li>笔记本</li>
+        <li>平板</li>
+        <li>家电</li>
+        <li>路由器</li>
+        <li>服务中心</li>
+        <li>社区</li>
+      </ul>
+      <form class="search-form" action="">
+        <input type="text">
+        <button><span class="icon icon-search"></span></button>
+        <ul class="suggestions">
+          <li>小米12</li>
+          <li>小米12</li>
+          <li>小米12</li>
+          <li>小米12</li>
+          <li>小米12</li>
+        </ul>
+      </form>
+    </div>
+
+    <div class="hero">
+      <ul class="product-menu">
+        <li>手机
+          <ul class="product-menu-sub">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+          </ul>
+        </li>
+        <li>电视
+          <ul class="product-menu-sub">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+            <li>004</li>
+            <li>005</li>
+            <li>006</li>
+            <li>007</li>
+            <li>008</li>
+            <li>009</li>
+            <li>010</li>
+            <li>011</li>
+            <li>012</li>
+            <li>013</li>
+          </ul>
+        </li>
+        <li>笔记本 平板
+          <ul class="product-menu-sub">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+        <li>出行 穿戴</li>
+        <li>耳机 音箱</li>
+        <li>家电</li>
+        <li>智能 路由器</li>
+        <li>电源 配件</li>
+        <li>健康 儿童</li>
+        <li>生活 箱包</li>
+      </ul>
+      <div class="slider">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/36b45c624f42fa81732457e3f9773dbd.jpg?thumb=1&w=1226&h=460&f=webp&q=90" alt="">
+      </div>
+    </div>
+
+    <div class="fixed-sidebar">
+      <ul>
+        <li>
+          <span class="icon icon-shopping-cart"></span>
+          <span class="icon-text">手机app</span>
+        </li>
+        <li>
+          <span class="icon icon-shopping-cart"></span>
+          <span class="icon-text">个人中心</span>
+        </li>
+        <li>
+          <span class="icon icon-shopping-cart"></span>
+          <span class="icon-text">售后服务</span>
+        </li>
+        <li>
+          <span class="icon icon-shopping-cart"></span>
+          <span class="icon-text">人工客服</span>
+        </li>
+        <li>
+          <span class="icon icon-shopping-cart"></span>
+          <span class="icon-text">购物车</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script src="less.js"></script>
+</html>

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 图标字体;
+  src: url(iconfont2.woff);
+}
+
+.icon {
+  font-family: 图标字体;
+}
+.icon-shopping-cart::before {
+  content: '\E60C'
+}
+.icon-search::before {
+  content: '\E616'
+}
+.icon-smile::before {
+  content: '\E60E'
+}
+.icon-good::before {
+  content: '\E60F'
+}
+.icon-message::before {
+  content: '\E610'
+}
+.icon-up::before {
+  content: '\E611'
+}
+.icon-down::before {
+  content: '\E612'
+}

@@ -1,407 +1,762 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-/**
- /* * 1. Correct the line height in all browsers.
-/* 更正所有浏览器中的行高。 */
-
-/* 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-/* 防止iOS中方向改变后字体大小的调整 */
-
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+* {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 2px red;
+}
+@font-face {
+  font-family: icon;
+  src: url(mao/mi-font.ttf);
+}
+@font-face {
+  font-family: font;
+  src: url(mao/mifont.woff);
 }
 
-/* Sections部分
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
-/* 删除所有浏览器中的边距 */
-body {
-  margin: 0;
-}
-
-/**
- * Render the `main` element consistently in IE.
- 在 IE 中一致地渲染 `main` 元素
- */
-
-main {
-  display: block;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- *更正“section”中“h1”元素的字体大小和边距，以及
- * Chrome、Firefox 和 Safari 中的 `article` 上下文。
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-  分组内容
-   ========================================================================== */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- 在 Firefox 中添加正确的框大小
- * 2. Show the overflow in Edge and IE.
-    在 Edge 和 IE 中显示溢出
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
-    更正所有浏览器中字体大小的继承和缩放
- * 2. Correct the odd `em` font sizing in all browsers.
-    更正所有浏览器中奇怪的“em”字体大小
- */
-
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/* Text-level semantics
-文本级语义
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- 删除 IE 10 中活动链接上的灰色背景
- */
-
+$primary-color: #333;
+$primary-font-color: #b0b0b0;
+$primary-font-size: 12px;
+$primary-width: 1226px;
 a {
-  background-color: transparent;
+  text-decoration: none;
 }
-
-/**
- * 1. Remove the bottom border in Chrome 57-
-     删除 Chrome 57 中的底部边框-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-    在 Chrome、Edge、IE、Opera 和 Safari 中添加正确的文本装饰
- */
-
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+ul {
+  list-style: none;
 }
+html,
+body {
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- 在 Chrome、Edge 和 Safari 中添加正确的字体粗细
- */
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- 更正所有浏览器中字体大小的继承和缩放
- * 2. Correct the odd `em` font sizing in all browsers.
- 更正所有浏览器中奇怪的“em”字体大小
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- 在所有浏览器中添加正确的字体大小
- */
-
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
-
-* 防止 `sub` 和 `sup` 元素影响行高
- * 所有浏览器
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Embedded content嵌入内容
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- 删除 IE 10 中链接内图像的边框。
- */
-
-img {
-  border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
-
-/**
- * 1. Change the font styles in all browsers.
- 更改所有浏览器中的字体样式
- * 2. Remove the margin in Firefox and Safari.
- 在 Firefox 和 Safari 中删除边距
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
- * Show the overflow in IE.
- 在 IE 中显示溢出。
- * 1. Show the overflow in Edge.
- 在 Edge 中显示溢出
- */
-
-button,
-input {
-  /* 1 */
-  overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- 移除 Edge、Firefox 和 IE 中文本转换的继承
- * 1. Remove the inheritance of text transform in Firefox.
- 移除 Firefox 中文本转换的继承。
- */
-
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- 更正 iOS 和 Safari 中无法设置可点击类型的样式
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
-
-移除 Firefox 中的内边框和内边距
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
+  margin: auto;
   padding: 0;
+  width: 100%;
+  background-color: #F5F5F5;
 }
-
-/**
- * Restore the focus styles unset by the previous rule.
-
-恢复上一条规则未设置的焦点样式。
- */
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+[class*="icon"] {
+  font-family: icon;
 }
+// 全局变量
+.page-wrapper {
+  margin: auto;
+  padding: 0;
+  font-family: font;
+  width: 100%;
+  // background-color: $primary-color;
+  // 顶部
+  .top-black {
+    margin: auto;
+    padding: 0;
+    background-color: $primary-color;
+    height: 40px;
+    line-height: 40px;
+    // 顶部内部
+    .top-black-inner {
+      width: $primary-width;
+      margin: auto;
+      padding: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      background-color: $primary-color;
+      color: $primary-font-color;
+      font-size: $primary-font-size;
+      // 顶部字体
+      a {
+        color: $primary-font-color;
+        display: inline-block;
+        font-size: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei,
+          Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+        &:hover {
+          color: #fff;
+        }
+      }
+      // 竖杠
+      .sep {
+        color: #424242;
+        // margin: 0 0.25em;
+      }
+      // hover
+      .left-links {
+        .download {
+          // 给a标签定位
+          position: relative;
+          &:hover > .downloadsj {
+            display: block;
+          }
+          // 给三角形隐藏
+          .downloadsj {
+            display: none;
+            margin: auto;
+            position: absolute;
+            top: 37px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            // border-top: 0px solid black transparent;
+            border-bottom: 15px solid #fff;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            z-index: 9;
+          }
 
-/**
- * Correct the padding in Firefox.
+          &:hover > .downloadApp {
+            height: 149px;
+            transition: 0.6s;
+          }
+          // 给hover图片设置高度0px隐藏
+          .downloadApp {
+            z-index: 99;
+            transition: 0.6s;
+            margin: auto;
+            overflow: hidden;
+            position: absolute;
+            top: 100%;
+            right: -70%;
+            width: 125px;
+            height: 0;
+            box-shadow: 0 2px 0.5rem #424242;
+            background-color: #ffff;
+            img {
+              margin: auto;
+              position: absolute;
+              top: 20px;
+              right: 0;
+              left: 0;
+              width: 90px;
+              height: 90px;
+            }
+            p {
+              // display: none;
+              margin: auto;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              text-align: center;
+              color: #333333;
+              font-size: 14px;
+              // font-weight: bold;
+            }
+          }
+        }
+      }
+      // 因为用了flex给右边间距靠近一些
+      .right-links {
+        margin-right: -140px;
+      }
+      // 购物车
+      .shopping-cart {
+        position: relative;
+        text-align: center;
+        width: 120px;
+        height: 40px;
+        background-color: #424242;
+        z-index: 9999;
+        &:hover {
+          background-color: #fff;
+        }
+        // background-color: pink;
+        .shopping-index {
+          width: 120px;
+          &:hover {
+            background-color: #fff;
+            z-index: 88;
+          }
+          // 字体设置定位
+          a {
+            position: relative;
+            line-height: 40px;
+            width: 120px;
+            // z-index: 9;
 
-更正 Firefox 中的填充
- */
+            &:hover {
+              color: orange;
+              background-color: #fff;
+            }
+            // 字体图标
 
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
+            .icon {
+              position: absolute;
+              left: 6%;
+              font-size: 20px;
+              line-height: 40px;
+            }
+            &:hover > .shopping-list {
+              height: 100px;
+              transition: 0.6s;
+              color: orange;
+              // display: block;
+            }
+            // hover
+            .shopping-list {
+              transition: 0.6s;
+              position: absolute;
+              // display: none;
+              right: 0;
+              width: 300px;
+              height: 0px;
+              overflow: hidden;
+              background-color: #ffffff;
+              box-shadow: 0 3px 0.5rem #424242;
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- 更正 Edge 和 IE 中的文本换行。
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- 更正 IE 中“fieldset”元素的颜色继承
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- 删除填充，这样开发人员在归零时不会被抓到
- * 所有浏览器中的 `fieldset` 元素。
- */
+              > span {
+                position: absolute;
+                top: 25%;
+                bottom: 25%;
+                left: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //第二部分
+  .header {
+    margin: auto;
+    padding: 0;
+    width: $primary-width;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // 左边logo
+    .header-left {
+      height: 62px;
+      a {
+        display: inline-block;
+        > img {
+          width: 56px;
+          height: 56px;
+        }
+      }
+    }
+    // 中间文字
+    .header-center {
+      margin: auto;
+      padding: 0;
+      width: 850px;
+      // margin-left: 40px;
+      // margin-right: -80px;
+      font-size: 16px;
+      &:hover > ul > li .center-hover {
+        height: 230px;
+        transition: 0.6s height, 0s z-index; // 鼠标hover时，z-index必须突变
+      }
+      ul {
+        height: 100px;
+        margin-left: 120px;
+        display: flex;
 
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
+        li {
+          display: inline-block;
+          line-height: 100px;
+          cursor: pointer;
+          padding: 0 10px;
+          &:hover > .center-hover {
+            z-index: 888;
+            // height: 230px;
+            transition: 1s height, 0s z-index; // 鼠标hover时，z-index必须突变
+          }
+          &:hover {
+            color: orangered;
+          }
+          .center-hover {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 0px;
+            background-color: white;
+            box-shadow: 0 3px 0.3em #333;
+            overflow: hidden;
+            z-index: 555;
+            cursor: default;
+            // border: 1px solid pink;
+            //  &:hover>ul{
+            //   z-index: 888;
+            //   transition: 1s height, 0s  z-index; // 鼠标hover时，z-index必须突变
+            // }
+            > ul {
+              // transition: none;
+              // visibility:hidden;
+              // position: absolute;
+              cursor: default;
+              width: $primary-width;
+              height: 230px;
+              margin: auto;
+              padding: 0;
+              display: flex;
+              align-items: center;
+              // border: #333 1px solid;
+              li {
+                margin-left: 10px;
+                // visibility: hidden;
+                a {
+                  position: relative;
+                  img {
+                    width: 140px;
+                    height: 100px;
+                  }
+                  .one-top {
+                    margin: 0 10px;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    text-align: center;
+                    color: #b0b0b0;
+                  }
+                }
+                .sep {
+                  display: inline-block;
+                  width: 2px;
+                  background-color: #e0e0e0;
+                  height: 100px;
+                  line-height: 100px;
+                  cursor: default;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // 右边边框
+  .header-right {
+    position: relative;
+    height: 50px;
+    width: 296px;
+    //  右边text
+    input {
+      position: absolute;
+      height: 50px;
+      box-sizing: border-box;
+      width: 245px;
+      right: 50px;
+      border: #b0b0b0 1px solid;
+      border-radius: 0px;
+      &:focus + button {
+        box-sizing: border-box;
+        border: 0px solid;
+        outline: pink 1px solid;
+      }
+      &:focus {
+        border: 0px solid;
+        box-sizing: border-box;
+        outline: pink 1px solid;
+      }
+      &:focus ~ .sear {
+        display: block;
+      }
+    }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- 在 Chrome、Firefox 和 Opera 中添加正确的垂直对齐方式
- */
+    button {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      box-sizing: border-box;
+      right: 0;
+      border: #b0b0b0 1px solid;
+      border-left: 0px;
+      &:hover {
+        background-color: orangered;
+        color: #fff;
+      }
+      > span {
+        font-size: 24px;
+      }
+    }
+    // 隐藏下拉框
+    .sear {
+      display: none;
+      position: relative;
+      position: absolute;
+      top: 100%;
+      width: 245px;
+      height: 240px;
+      border: 1px pink solid;
+      box-sizing: border-box;
+      background-color: #fff;
+      // z-index: 999;
+      ul {
+        position: absolute;
+        top: -20px;
+        left: -40px;
+        right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        li {
+          display: inline-block;
+          height: 30px;
 
-progress {
-  vertical-align: baseline;
-}
+          a {
+            width: 225px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 20px;
+            color: #333;
+            &:hover {
+              background-color: #b0b0b0;
+            }
+          }
+        }
+      }
+    }
+  }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- 删除 IE 10+ 中的默认垂直滚动条
- */
+  .menu-box {
+    margin: auto;
+    padding: 0;
+    width: $primary-width;
+    height: 460px;
+    position: relative;
+    background-color: #3f3d3e;
+    > ul {
+      width: 235px;
+      height: 435px;
+      padding-top: 25px;
+      background-color: #3f3d3e;
 
-textarea {
-  overflow: auto;
-}
+      > li {
+        margin-left: -40px;
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 40px;
+        color: #ffffff;
+        position: relative;
+        &:hover {
+          background-color: orangered;
+        }
+        &:hover ul {
+          display: block;
+        }
+        > ul {
+          display: none;
+          position: absolute;
+          height: 460px;
+          width: calc(1226px - 285px);
+          left: 100%;
+          padding-top: 0;
+          top: -25px;
+          background-color: white;
+          box-shadow: 0 0px 0.3em #3f3d3e;
+          > li {
+            // background-color: white;
+            height: calc(460px / 6);
+            width: 235px;
+            color: black;
 
-/**
- * 1. Add the correct box sizing in IE 10.
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+          }
+          &:nth-child(n + 7) {
+            margin-left: 235px;
+          }
+          &:nth-child(n + 13) {
+            margin-left: 470px;
+          }
+          &:nth-child(n + 19) {
+            margin-left: 705px;
+          }
+          &:nth-child(6n + 7) {
+            margin-top: -460px;
+          }
+        }
+      }
+    }
+    // 上部分得中间
+    .center-top {
+      width: $primary-width;
+      height: 170px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-evenly;
+      box-sizing: border-box;
 
-在 IE 10 中添加正确的框大小。
- * 2. Remove the padding in IE 10.
+      // border: 1px solid blue;
+      .center-top-left {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        width: 234px;
+        height: 170px;
+        align-items: center;
+        background-color: #5f5750;
+        margin-right: 15px;
+        // >span{
+        //   display:inline-block;
+        //   background-color:  #665E57;;
+        //   height: 60px;
+        //   width: 2px;
+        // }
 
-删除 IE 10 中的填充
- */
+        a {
+          position: relative;
+          width: 64px;
+          height: 70px;
 
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
+          &::before {
+            content: "";
+            display: inline-block;
+            background-color: #665e57;
+            height: 60px;
+            width: 2px;
+          }
+          img {
+            position: absolute;
+            margin: auto;
+            width: 34px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+          > span {
+            position: absolute;
+            margin: auto;
+            padding: 0;
+            bottom: 0;
+            font-size: 14px;
+            left: 4.5px;
+            color: #cfccca;
+          }
+        }
+      }
+      .center-top-right {
+        width: calc($primary-width - 234px);
+        height: 170px;
+        display: flex;
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- 更正Chrome中递增和递减按钮的光标样式
- */
+        justify-content: space-between;
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
+        > div {
+          width: 316px;
+          height: 170px;
+          a {
+            > img {
+              width: 316px;
+              height: 170px;
+            }
+          }
+        }
+      }
+    }
+  }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- 更正 Chrome 和 Safari 中的奇怪外观。
- * 2. Correct the outline style in Safari.
+  .center-top-b {
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    width: $primary-width;
+    height: 120px;
+    border: 1px solid pink;
+    > img {
+      width: $primary-width;
+      height: 120px;
+    }
+  }
+  //
+  //
 
-更正 Safari 中的轮廓样式。
- */
+  //
 
-[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
+  //
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- 在 macOS 上删除 Chrome 和 Safari 中的内部填充
- */
+  .home-top {
+    margin: auto;
+    padding: 0;
+    width: $primary-width;
+    height: 686px;
+    // background-color: #fff;
+    .home-top-top {
+      width: $primary-width;
+      height: 58px;
+      display: flex;
+      justify-content: space-between;
 
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+      .home-top-top-left {
+        font-size: 32px;
+        line-height: 58px;
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- 更正 iOS 和 Safari 中无法设置可点击类型的样式
- * 2. Change font properties to `inherit` in Safari.
- 在 Safari 中将字体属性更改为“继承”
- */
+      }
+      .home-top-top-right {
+        font-size: 24px;
+        line-height: 58px;
 
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
+        a {
 
-/* Interactive交互的
-   ========================================================================== */
+          transition: 0.6s;
+          color: $primary-color;
+          &:hover {
+            transition: 0.3s;
+            color: #ff6700;
+          }
+        }
+      }
+    }
 
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- 在 Edge、IE 10+ 和 Firefox 中添加正确的显示。
- */
+    .home-top-left {
+      float: left;
+      &:hover {
+        box-shadow: 0 2px 0.4em gray;
+        transform: translate(0px, -2px);
+        transition: 0.3s;
+      }
+    }
+    // 骁龙8+
+    .home-top-right {
+      ul {
+        li {
+          width: 234px;
+          height: 300px;
+          float: right;
+          margin-left: 10px;
+          position: relative;
+           background-color: #fff;
+          &:hover {
+            box-shadow: 0 2px 0.4em gray;
+            transform: translate(0px, -2px);
+            transition: 0.3s;
+          }
+          &:nth-child(-n + 4) {
+            margin-top: -16px;
+          }
+          &:nth-child(n + 5) {
+            margin-top: 16px;
+          }
 
-details {
-  display: block;
-}
+          > a {
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
 
-/*
- * Add the correct display in all browsers.
- 在所有浏览器中添加正确的显示
- */
+            > span {
+              position: absolute;
+              margin: auto;
+              // top: 100%;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              text-align: center;
+              color: $primary-font-color;
+            }
+            > img {
+              position: absolute;
+              margin: auto;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 
-summary {
-  display: list-item;
-}
+  .home-top-center {
+    margin: auto;
+    padding: 0;
+    height: 686px;
+    width: $primary-width;
+    // --width:234px;
+    .home-top-center-left {
+      height: 58px;
+      //  float: left;
+      line-height: 58px;
+    }
 
-/* Misc杂项
-   ========================================================================== */
+    .home-top-center-hover {
+      float: right;
+      height: 58px;
+      margin-top: -58px;
 
-/**
- * Add the correct display in IE 10+.
- 在 IE 10+ 中添加正确的显示。
- */
+      > li {
+        float: right;
+        line-height: 58px;
+        margin-left: 20px;
+        position: relative;
+        ul {
+          margin: auto;
+          padding: 0;
+          position: absolute;
+          width: calc(1226px - 234px);
+          height: 614px;
+          right: 0;
+          background-color: pink;
+          // border: 1px pink solid;
+          // display: flex;
+          // flex-wrap: wrap;
+          // justify-content: space-between;
+          li {
+            width: 234px;
+            height: 300px;
+            box-shadow: 0 2px 0.4em gray;
+            margin-left: 14px;
+            // a{
+            //   width: 234px;
+            //   height: 300px;
+            //   display:block;
+            //   position: relative;
+            //   .shoubiao{
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //   }
+            // }
+            &:nth-child(-n+4){
+              float: right;
+            }
+            &:nth-child(n+5){
+              float: left;
+            }
+           &:nth-child(n+5){
+            margin-top: 14px;
+           }
+            // &:nth-child(n + 3) {
+            //   margin-left: --width;
 
-template {
-  display: none;
-}
+            // }
+            // &:nth-child(n + 5) {
+            //   margin-left: --width*2;
 
-/**
- * Add the correct display in IE 10.
- 在 IE 10 中添加正确的显示。
- */
+            // }
 
-[hidden] {
-  display: none;
+            //   &:nth-child(n + 7) {
+            //   margin-left: --width*3;
+
+            // }
+            // &:nth-child(2n+3){
+            //   margin-top: -600px;
+            // }
+            // &:last-child{
+            //   height: ;
+            // }
+          }
+        }
+      }
+    }
+    .home-top-center-buttom-left {
+      // margin-top: 58px;
+      background-color: #fff;
+      margin-left: 0;
+      float: left;
+      img {
+        width: 234px;
+      }
+    }
+  }
 }
