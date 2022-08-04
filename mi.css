@@ -1,7 +1,7 @@
-/* * {
+* {
   xbackground-color: rgba(0, 0, 0, 0.1);
   xbox-shadow: inset 0 0 2px red;
-} */
+}
 
 @font-face {
   font-family: icon;
@@ -204,25 +204,39 @@ body {
   padding: 0;
   width: 850px;
   font-size: 16px;
+  display: flex;
 }
-.page-wrapper .header .header-center:hover > ul > li .center-hover {
+.page-wrapper .header .header-center .header-center-right {
+  align-self: center;
+}
+.page-wrapper .header .header-center .header-center-right a {
+  color: black;
+  padding: 10px;
+  display: inline-block;
+}
+.page-wrapper .header .header-center .header-center-right > a:hover {
+  color: #ff6700;
+}
+.page-wrapper .header .header-center ul {
+  height: 80px;
+  margin-left: 120px;
+  display: flex;
+  width: 498px;
+  padding-left: 0;
+}
+.page-wrapper .header .header-center ul:hover .center-hover {
   height: 230px;
   transition: 0.6s height, 0s z-index;
 }
-.page-wrapper .header .header-center ul {
-  height: 100px;
-  margin-left: 120px;
-  display: flex;
-}
 .page-wrapper .header .header-center ul li {
   display: inline-block;
-  line-height: 100px;
+  line-height: 80px;
   cursor: pointer;
   padding: 0 10px;
 }
 .page-wrapper .header .header-center ul li:hover > .center-hover {
   z-index: 888;
-  transition: 1s height, 0s z-index;
+  transition: 0.4s height, 0s z-index;
 }
 .page-wrapper .header .header-center ul li:hover {
   color: orangered;

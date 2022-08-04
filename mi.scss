@@ -235,27 +235,47 @@ body {
       margin: auto;
       padding: 0;
       width: 850px;
-      // margin-left: 40px;
-      // margin-right: -80px;
       font-size: 16px;
-      &:hover > ul > li .center-hover {
-        height: 230px;
-        transition: 0.6s height, 0s z-index; // 鼠标hover时，z-index必须突变
+      display: flex;
+      // 中间右边文字
+      .header-center-right{
+         align-self: center;
+
+        //  padding-left: 10px;
+
+         a{
+          color: black;
+          padding: 10px;
+          display: inline-block;
+         }
+         &>a:hover{
+
+          color: #ff6700;
+         }
       }
       ul {
-        height: 100px;
+        height: 80px;
         margin-left: 120px;
         display: flex;
+        width: 498px;
+        padding-left: 0;
 
+        // transition: 1s;
+         &:hover  .center-hover {
+        height: 230px;
+        transition: .6s height, 0s z-index; // 鼠标hover时，z-index必须突变
+      }
         li {
+
           display: inline-block;
-          line-height: 100px;
+          line-height: 80px;
           cursor: pointer;
           padding: 0 10px;
+
           &:hover > .center-hover {
             z-index: 888;
             // height: 230px;
-            transition: 1s height, 0s z-index; // 鼠标hover时，z-index必须突变
+            transition: .4s height, 0s z-index; // 鼠标hover时，z-index必须突变
           }
           &:hover {
             color: orangered;
@@ -270,6 +290,7 @@ body {
             overflow: hidden;
             z-index: 555;
             cursor: default;
+
             // border: 1px solid pink;
             //  &:hover>ul{
             //   z-index: 888;
