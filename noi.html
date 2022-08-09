@@ -471,7 +471,7 @@ console.log(y.toFixed(3))
 
   else if (count > 1000) {
 
-    var price2 = ((5000 - 1000) % 500 ) === 0 ? ((5000 - 1000) / 500 )*4: (((5000 - 1000) / 500) + 1)*4
+    var price2 = ((count- 1000) % 500 ) === 0 ? (( count - 1000) / 500 )*4: (parseInt((count - 1000) / 500) + 1)*4
 
     if (count_ === 'y') {
       console.log(price + price2 + 5)
