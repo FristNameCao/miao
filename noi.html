@@ -1,4 +1,4 @@
-<script  id="ch0103/01">
+<script type="xxx" id="ch0103/01">
 
   var a = Number(prompt())
   var b = Number(prompt())
@@ -6,7 +6,7 @@
   console.log(c)
 </script>
 
-<script  id="ch0103/02">
+<script type="xxx" id="ch0103/02">
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
@@ -14,7 +14,7 @@
   console.log(d)
 </script>
 
-<script  id="ch0103/03">
+<script type="xxx" id="ch0103/03">
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
@@ -22,14 +22,14 @@
   console.log(parseInt(d))
 </script>
 
-<script  id="ch0103/04">
+<script type="xxx" id="ch0103/04">
   var a = Number(prompt('请输入被除数'))  //被除数
   var b = Number(prompt('请输入除数')) //除数
   console.log(parseInt( a/b))
   console.log(parseInt(a % b))
 </script>
 
-<script  id="ch0103/05">
+<script type="xxx" id="ch0103/05">
   var a = parseInt( Number(prompt()) )
   var b = parseInt( Number(prompt()) )
   var c = parseFloat(a) / parseFloat(b)
@@ -37,7 +37,7 @@
 </script>
 
 
-<script  id="ch0103/06">
+<script type="xxx" id="ch0103/06">
   var a = Number(prompt('请输入确诊人数')) //确诊人数
   var b = Number(prompt('请输入死亡人数')) //死亡人数
   var c = (parseFloat(b) / parseFloat(a)) * 100
@@ -45,7 +45,7 @@
 </script>
 
 
-<script  id="ch0103/07">
+<script type="xxx" id="ch0103/07">
 
   var x = Number(prompt('请输入不超过100的x'))
   var a = Number(prompt('请输入不超过100的a'))
@@ -58,7 +58,7 @@
   console.log(f.toFixed(7))
 </script>
 
-<script  id="ch0103/08">
+<script type="xxx" id="ch0103/08">
 
   var x = Number(prompt('请输入华氏温度'))
   f =5*(x-32)/9
@@ -66,7 +66,7 @@
   console.log(f.toFixed(5))
 </script>
 
-<script  id="ch0103/09">
+<script type="xxx" id="ch0103/09">
   var pi = 3.14159
   var r = Number(prompt())
   var d = (2 * r).toFixed(4)
@@ -78,7 +78,7 @@
 </script>
 
 
-<script  id="ch0103/10">
+<script type="xxx" id="ch0103/10">
 
   var r1 = Number(prompt())
   var r2 = Number(prompt())
@@ -88,7 +88,7 @@
 </script>
 
 
-<script  id="ch0103/11">
+<script type="xxx" id="ch0103/11">
 
   var a = Math.abs( parseFloat((prompt())))
   var b = Math.abs(parseFloat((prompt())))
@@ -97,7 +97,7 @@
   console.log(r.toFixed(4))
 </script>
 
-<script  id="ch0103/12">
+<script type="xxx" id="ch0103/12">
 
 var r = Number(prompt())
 
@@ -106,7 +106,7 @@ var V=4/3*3.14*Math.pow(r,3)
 console.log(V.toFixed(2))
 </script>
 
-<script id="ch0103/13">
+<script type="xxx" id="ch0103/13">
 
   var num = Number(prompt())
   bai = parseInt(num / 100)
@@ -116,31 +116,31 @@ console.log(V.toFixed(2))
   console.log(ge.toString() + shi.toString() + bai.toString())
 </script>
 
-<script  id="ch0103/14">
+<script type="xxx" id="ch0103/14">
 
 
   h = parseInt(Number(prompt()))
   r = parseInt(Number(prompt()))
-  var L=3.14159*r*r*h/1000
+  var L = 3.14159 * r * r * h / 1000
 
-  console.log(parseInt(20 / L + 1))
+  console.log(20 % L === 0 ? parseInt(20 / L) : parseInt(20 / L) + 1)
 </script>
 
 
 
-<script  id="ch0103/15">
+<script type="xxx" id="ch0103/15">
 
 
   n = parseInt(Number(prompt()))
   x = parseInt(Number(prompt()))
   y = parseInt(Number(prompt()))
-  r = n - parseInt( y / x + 1)
+  r = n - (y % x===0? parseInt(y / x):parseInt(y/x+1))
 
 
   console.log(r)
 </script>
 
-<script  id="ch0103/16">
+<script type="xxx" id="ch0103/16">
 
 
   x1 = Number(prompt())
@@ -152,7 +152,7 @@ console.log(V.toFixed(2))
   console.log(r.toFixed(3))
 </script>
 
-<script  id="ch0103/17">
+<script type="xxx" id="ch0103/17">
 
 
   x1 = Number(prompt())
@@ -169,7 +169,7 @@ console.log(V.toFixed(2))
   console.log(r.toFixed(2))
 </script>
 
-<script  id="ch0103/18">
+<script type="xxx" id="ch0103/18">
   a1 = Number(prompt())
   a2 = Number(prompt())
   n = Number(prompt())
@@ -179,13 +179,13 @@ console.log(V.toFixed(2))
 </script>
 
 
-<script  id="ch0103/19">
+<script type="xxx" id="ch0103/19">
   a = Number(prompt())
   b = Number(prompt())
   console.log(a * b)
 </script>
 
-<script  id="ch0103/20">
+<script type="xxx" id="ch0103/20">
   // function func(n){
   //   return n == 0 ? 1 : func( n - 1 ) * 2
   // }
@@ -213,7 +213,7 @@ console.log(V.toFixed(2))
   var n=  parseInt (Number( prompt()))
   var x=  parseInt (Number(prompt()))
   var y=  parseInt (Number(prompt()))
-  var d=n-parseInt(y / x+1)
+  var d=n-math.ceil(y / x)
   console.log(d)
 </script>
 
@@ -260,3 +260,226 @@ console.log(V.toFixed(2))
   var an=cha(a1,a2,n)
   console.log(an)
 </script> -->
+
+
+<script type="xxx" id="ch0104/01">
+
+var N=prompt()
+
+if(N>0){
+  console.log('positive')
+}
+else if(N === 0){
+  console.log('zero')
+}
+else{
+  console.log('negative')
+}
+
+</script>
+
+<script type="xxx" id="ch0104/02">
+
+var num=parseFloat(prompt())
+ console.log( Math.abs(num))
+</script>
+
+<script type="xxx" id="ch0104/03">
+
+var num=parseInt(prompt())
+
+if(num%2===0){
+  console.log("even")
+}
+else{
+  console.log('odd')
+}
+
+</script>
+<script type="xxx" id="ch0104/04">
+
+var num=((prompt()).charCodeAt())
+  if (num % 2 === 0) {
+    console.log("NO")
+  }
+  else {
+    console.log('YES')
+  }
+
+</script>
+
+<script type="xxx" id="ch0104/05">
+  var x = prompt()
+  var y = prompt()
+  if(x>y){
+    console.log('>')
+  }
+  else if(x===y){
+    console.log('=')
+
+  }
+  else {
+    console.log('<')
+
+  }
+</script>
+<script type="xxx" id="ch0104/06">
+
+
+var num=parseInt( prompt())
+
+if(num>=10&&num<=99){
+
+  console.log('1')
+}
+else{
+  console.log('0')
+
+}
+</script>
+
+<script type="xxx" id="ch0104/07">
+ var num1=Number( prompt())
+ var num2=Number(prompt())
+if(num1>=10||num2>=20){
+  console.log("1")
+}
+else{
+  console.log('0')
+
+}
+</script>
+
+
+<script type="xxx" id="ch0104/08">
+var num=parseInt( prompt())
+
+if(num%3===0&&num%5===0){
+
+  console.log('YES')
+}
+else{
+  console.log('NO')
+
+}
+</script>
+
+
+<script type="xxx" id="ch0104/09">
+
+  var num = parseInt(prompt())
+
+  if (num % 3 === 0 && num % 5 === 0 && num % 7 === 0) {
+
+    console.log('3' + ' 5' + ' 7')
+  }
+  else if (num % 3 === 0 && num % 5 === 0) {
+    console.log('3' + ' 5')
+  }
+  else if (num % 3 === 0 && num % 7 === 0) {
+    console.log('3' + ' 7')
+  }
+  else if (num % 5 === 0 && num % 7 === 0) {
+    console.log('5' + ' 7')
+  }
+  else if (num % 3 === 0) {
+    console.log('3')
+  }
+  else if (num % 5 === 0) {
+    console.log('5')
+  }
+  else if (num % 7 === 0) {
+    console.log('7')
+  }
+  else if(num % 3 !== 0 && num % 5 !== 0 && num % 7 !== 0){
+    console.log('n')
+  }
+</script>
+
+<script type="xxx" id="ch0104/10">
+
+  var score_ch = Number(prompt())
+  var score_ma = Number(prompt())
+
+  if (score_ch >= 60 && score_ma >= 60 || !(score_ch >= 60 || score_ma >= 60)) {
+    console.log('0')
+  }
+  else {
+    console.log('1')
+  }
+
+</script>
+<script type="xxx" id="ch0104/11">
+
+var day=prompt()
+
+if(day===1||day===3||day===5){
+
+  console.log("NO")
+
+}
+else{ console.log("YES") }
+
+ </script>
+
+
+<script type="xxx" id="ch0104/12">
+
+var d = Number(prompt())
+var t1 = 27+23+d/3
+var t2 = d/1.2
+if (t1>t2){
+  console.log('Walk')
+}
+else if(t1<t2){
+  console.log('Bike')
+}
+else{console.log('All')}
+</script>
+
+<script type="xxx" id="ch0104/13">
+
+var x=Number(prompt())
+if(x>=0&&x<5)
+{
+var y=-x+2.5
+}
+if(x>=5&&x<10){
+  var y=2-1.5*(x-3)*(x-3)
+}
+if(x>=10&&x<20){
+  var y=x/2-1.5
+}
+
+console.log(y.toFixed(3))
+</script>
+
+
+<script id="ch0104/14">
+
+  var count = Number(prompt())
+  var count_ = String(prompt('加急请输入y否则输入n'))
+  var price = 8
+  if (count <= 1000) {
+    if (count_ === 'y') {
+      console.log(price + 5)
+    }
+    else {
+      console.log(price)
+    }
+  }
+
+  else if (count > 1000) {
+
+    var price2 = ((5000 - 1000) % 500 ) === 0 ? ((5000 - 1000) / 500 )*4: (((5000 - 1000) / 500) + 1)*4
+
+    if (count_ === 'y') {
+      console.log(price + price2 + 5)
+    }
+    else {
+      console.log(price + price2)
+    }
+
+  }
+
+</script>
