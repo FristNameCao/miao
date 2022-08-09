@@ -1,0 +1,262 @@
+<script  id="ch0103/01">
+
+  var a = Number(prompt())
+  var b = Number(prompt())
+  c = a + b
+  console.log(c)
+</script>
+
+<script  id="ch0103/02">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  d = (a + b) * c
+  console.log(d)
+</script>
+
+<script  id="ch0103/03">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  d = (a + b) /c
+  console.log(parseInt(d))
+</script>
+
+<script  id="ch0103/04">
+  var a = Number(prompt('请输入被除数'))  //被除数
+  var b = Number(prompt('请输入除数')) //除数
+  console.log(parseInt( a/b))
+  console.log(parseInt(a % b))
+</script>
+
+<script  id="ch0103/05">
+  var a = parseInt( Number(prompt()) )
+  var b = parseInt( Number(prompt()) )
+  var c = parseFloat(a) / parseFloat(b)
+  console.log(c.toFixed(9))
+</script>
+
+
+<script  id="ch0103/06">
+  var a = Number(prompt('请输入确诊人数')) //确诊人数
+  var b = Number(prompt('请输入死亡人数')) //死亡人数
+  var c = (parseFloat(b) / parseFloat(a)) * 100
+  console.log(c.toFixed(3) + '%')
+</script>
+
+
+<script  id="ch0103/07">
+
+  var x = Number(prompt('请输入不超过100的x'))
+  var a = Number(prompt('请输入不超过100的a'))
+  var b = Number(prompt('请输入不超过100的b'))
+  var c = Number(prompt('请输入不超过100的c'))
+  var d = Number(prompt('请输入不超过100的d'))
+
+  f=a*Math.pow(x,3)+b*Math.pow(x, 2)+c*x+d
+
+  console.log(f.toFixed(7))
+</script>
+
+<script  id="ch0103/08">
+
+  var x = Number(prompt('请输入华氏温度'))
+  f =5*(x-32)/9
+
+  console.log(f.toFixed(5))
+</script>
+
+<script  id="ch0103/09">
+  var pi = 3.14159
+  var r = Number(prompt())
+  var d = (2 * r).toFixed(4)
+  var l = (d * pi).toFixed(4)
+  var s = (pi * Math.pow(r, 2)).toFixed(4)
+  console.log(d)
+  console.log(l)
+  console.log(s)
+</script>
+
+
+<script  id="ch0103/10">
+
+  var r1 = Number(prompt())
+  var r2 = Number(prompt())
+  var R = 1 / (1 / r1 + 1 / r2)
+
+  console.log(R.toFixed(2))
+</script>
+
+
+<script  id="ch0103/11">
+
+  var a = Math.abs( parseFloat((prompt())))
+  var b = Math.abs(parseFloat((prompt())))
+  var r=a%b
+
+  console.log(r.toFixed(4))
+</script>
+
+<script  id="ch0103/12">
+
+var r = Number(prompt())
+
+var V=4/3*3.14*Math.pow(r,3)
+
+console.log(V.toFixed(2))
+</script>
+
+<script id="ch0103/13">
+
+  var num = Number(prompt())
+  bai = parseInt(num / 100)
+  shi = parseInt(num / 10 % 10)
+  ge = parseInt(num % 10)
+
+  console.log(ge.toString() + shi.toString() + bai.toString())
+</script>
+
+<script  id="ch0103/14">
+
+
+  h = parseInt(Number(prompt()))
+  r = parseInt(Number(prompt()))
+  var L=3.14159*r*r*h/1000
+
+  console.log(parseInt(20 / L + 1))
+</script>
+
+
+
+<script  id="ch0103/15">
+
+
+  n = parseInt(Number(prompt()))
+  x = parseInt(Number(prompt()))
+  y = parseInt(Number(prompt()))
+  r = n - parseInt( y / x + 1)
+
+
+  console.log(r)
+</script>
+
+<script  id="ch0103/16">
+
+
+  x1 = Number(prompt())
+  y1 = Number(prompt())
+  x2 = Number(prompt())
+  y2 = Number(prompt())
+  r = Math.sqrt(Math.pow(x1 - x2,2) + Math.pow(y1 - y2,2))
+
+  console.log(r.toFixed(3))
+</script>
+
+<script  id="ch0103/17">
+
+
+  x1 = Number(prompt())
+  y1 = Number(prompt())
+  x2 = Number(prompt())
+  y2 = Number(prompt())
+  x3 = Number(prompt())
+  y3 = Number(prompt())
+  L1 = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2))
+  L2 = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2))
+  L3 = Math.sqrt(Math.pow(x2 - x3, 2) + Math.pow(y2 - y3, 2))
+  p = (L1 + L2 + L3) / 2
+  r = Math.sqrt(p*(p - L1)*(p - L2)*(p - L3))
+  console.log(r.toFixed(2))
+</script>
+
+<script  id="ch0103/18">
+  a1 = Number(prompt())
+  a2 = Number(prompt())
+  n = Number(prompt())
+  d = a2 - a1
+  r = a1 + (n - 1) * d
+  console.log(r)
+</script>
+
+
+<script  id="ch0103/19">
+  a = Number(prompt())
+  b = Number(prompt())
+  console.log(a * b)
+</script>
+
+<script  id="ch0103/20">
+  // function func(n){
+  //   return n == 0 ? 1 : func( n - 1 ) * 2
+  // }
+  // n = Number(prompt())
+  // console.log(func(n))
+// 1. n不等于0， func（5-1）*2
+// 2. n不等于0，func(4-1)*2
+// 3.n不等于0,
+// n===4
+// n===3
+// 2^5 = 2^4 * 2
+// 2^4 = 2^3 * 2
+// 2^3 = 2^2 * 2
+// 2^2 = 2^1 * 2
+// 2^1 = 2^0 * 2
+// 2^0 = 1
+// 2^5 = 1 *2 *2 *2 *2*2
+
+  n = parseInt((prompt()))
+  console.log(31 > n && n >= 0 ? Math.pow(2, n) : '不符合0<=n<31')
+</script>
+
+
+<!-- <script >
+  var n=  parseInt (Number( prompt()))
+  var x=  parseInt (Number(prompt()))
+  var y=  parseInt (Number(prompt()))
+  var d=n-parseInt(y / x+1)
+  console.log(d)
+</script>
+
+
+
+<script >
+  var Xa = Number(prompt())
+  var Ya = Number(prompt())
+  var Xb = Number(prompt())
+  var Yb = Number(prompt())
+  var AB = Math.sqrt((Math.pow(Xa - Xb, 2)) + (Math.pow(Ya - Yb, 2)))
+  console.log(AB.toFixed(3))
+
+</script>
+
+
+<script  >
+  var X1 = Number(prompt())
+  var Y1 = Number(prompt())
+  var X2 = Number(prompt())
+  var Y2 = Number(prompt())
+  var X3 = Number(prompt())
+  var Y3 = Number(prompt())
+  san = function (X1, X2, Y1, Y2) {return Math.sqrt((Math.pow(X1 - X2, 2)) + (Math.pow(Y1 - Y2, 2)))}
+  var a = san(X1,X2,Y1,Y2)
+  var b = san(X1,X3,Y1,Y3)
+  var c = san(X2,X3,Y2,Y3)
+  var p=(a+b+c)/2
+  var s=Math.sqrt(p*(p-a)*(p-b)*(p-c))
+  console.log(s.toFixed(2))
+
+
+</script>
+
+<script>
+  var a1 = parseInt( Number(prompt()))
+  var a2 = parseInt(Number(prompt()))
+  var n = parseInt(Number(prompt()))
+
+  cha=function(a1,a2,n){
+   return a1+(a2-a1)*(n-1)
+  }
+
+  var an=cha(a1,a2,n)
+  console.log(an)
+</script> -->
