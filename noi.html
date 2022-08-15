@@ -264,47 +264,47 @@ console.log(V.toFixed(2))
 
 <script type="xxx" id="ch0104/01">
 
-var N=prompt()
+      var N=prompt()
 
-if(N>0){
-  console.log('positive')
-}
-else if(N === 0){
-  console.log('zero')
-}
-else{
-  console.log('negative')
-}
+      if(N>0){
+        console.log('positive')
+      }
+      else if(N === 0){
+        console.log('zero')
+      }
+      else{
+        console.log('negative')
+      }
 
 </script>
 
 <script type="xxx" id="ch0104/02">
 
-var num=parseFloat(prompt())
- console.log( Math.abs(num))
+  var num=parseFloat(prompt())
+  console.log( Math.abs(num))
 </script>
 
 <script type="xxx" id="ch0104/03">
 
-var num=parseInt(prompt())
+    var num=parseInt(prompt())
 
-if(num%2===0){
-  console.log("even")
-}
-else{
-  console.log('odd')
-}
+    if(num%2===0){
+      console.log("even")
+    }
+    else{
+      console.log('odd')
+    }
 
 </script>
 <script type="xxx" id="ch0104/04">
 
-var num=((prompt()).charCodeAt())
-  if (num % 2 === 0) {
-    console.log("NO")
-  }
-  else {
-    console.log('YES')
-  }
+  var num=((prompt()).charCodeAt())
+    if (num % 2 === 0) {
+      console.log("NO")
+    }
+    else {
+      console.log('YES')
+    }
 
 </script>
 
@@ -326,16 +326,16 @@ var num=((prompt()).charCodeAt())
 <script type="xxx" id="ch0104/06">
 
 
-var num=parseInt( prompt())
+    var num=parseInt( prompt())
 
-if(num>=10&&num<=99){
+    if(num>=10&&num<=99){
 
-  console.log('1')
-}
-else{
-  console.log('0')
+      console.log('1')
+    }
+    else{
+      console.log('0')
 
-}
+    }
 </script>
 
 <script type="xxx" id="ch0104/07">
@@ -352,16 +352,16 @@ else{
 
 
 <script type="xxx" id="ch0104/08">
-var num=parseInt( prompt())
+  var num=parseInt( prompt())
 
-if(num%3===0&&num%5===0){
+  if(num%3===0&&num%5===0){
 
-  console.log('YES')
-}
-else{
-  console.log('NO')
+    console.log('YES')
+  }
+  else{
+    console.log('NO')
 
-}
+  }
 </script>
 
 
@@ -411,45 +411,44 @@ else{
 </script>
 <script type="xxx" id="ch0104/11">
 
-var day=prompt()
+  var day=prompt()
 
-if(day===1||day===3||day===5){
+  if(day===1||day===3||day===5){
 
-  console.log("NO")
+    console.log("NO")
 
-}
-else{ console.log("YES") }
+  }
+  else{ console.log("YES") }
 
  </script>
 
 
 <script type="xxx" id="ch0104/12">
-
-var d = Number(prompt())
-var t1 = 27+23+d/3
-var t2 = d/1.2
-if (t1>t2){
-  console.log('Walk')
-}
-else if(t1<t2){
-  console.log('Bike')
-}
-else{console.log('All')}
+  var d = Number(prompt())
+  var t1 = 27+23+d/3
+  var t2 = d/1.2
+  if (t1>t2){
+    console.log('Walk')
+  }
+  else if(t1<t2){
+    console.log('Bike')
+  }
+  else{console.log('All')}
 </script>
 
 <script type="xxx" id="ch0104/13">
 
 var x=Number(prompt())
-if(x>=0&&x<5)
-{
-var y=-x+2.5
-}
-if(x>=5&&x<10){
-  var y=2-1.5*(x-3)*(x-3)
-}
-if(x>=10&&x<20){
-  var y=x/2-1.5
-}
+    if(x>=0&&x<5)
+    {
+    var y=-x+2.5
+    }
+    if(x>=5&&x<10){
+      var y=2-1.5*(x-3)*(x-3)
+    }
+    if(x>=10&&x<20){
+      var y=x/2-1.5
+    }
 
 console.log(y.toFixed(3))
 </script>
@@ -1412,7 +1411,7 @@ console.log(y.toFixed(3))
 
 </script>
 
-<script id="ch0105/42">
+<script type="xxx" id="ch0105/42">
   var Height = Number(prompt())
   var Width = Number(prompt())
   var str = prompt()
@@ -1657,3 +1656,71 @@ console.log(y.toFixed(3))
 <!-- 6: 1 2 2 3 3 3
 5: 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5
 1*1+2*2+3*3 -->
+
+<script type="xxx" id="narcissistic">
+  var num = Number(prompt())
+  var s = num
+  var sum = 0
+  while (num) {
+    ge = num % 10
+    num = Math.floor(num / 10)
+    sum += Math.pow(ge, 3)
+  }
+  if (sum === s) {
+    console.log('YES')
+  }
+  else {
+    console.log('NO')
+  }
+</script>
+
+<script type="xxx" id="narcissistics">
+  var sum
+  for (var i = 152; i < 10000; i++) {
+    var s = i
+    sum = 0
+    while (s) {
+      ge = s % 10
+      s = Math.floor(s / 10)
+      sum += Math.pow(ge, 3)
+    }
+    if (sum === i) {
+      console.log(sum)
+    }
+  }
+
+</script>
+<script id="palindrom">
+  debugger
+  
+  var num = Number(prompt())
+  var num2 = num
+  var s = num
+  var c = 1
+  var sum = 0
+  var f = 0
+  while (s) {
+    s = Math.floor(s / 10)
+    c = c * 10
+  }
+  while (c) {
+    c = c / 10
+    sum = num % 10
+    num = Math.floor(num / 10)
+    sum = sum * c
+    f += sum
+  }
+  if (f === num2) {
+    console.log('YES')
+  }
+  else {
+    console.log('NO')
+
+  }
+
+</script>
+
+<script id="weekday">
+
+
+</script>
