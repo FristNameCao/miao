@@ -36,8 +36,10 @@ var fristnamecao = {
     return NewArray;
   },
 
-  difference: function difference(Array1, ...Array2) {
-    debugger;
+  difference: function difference(
+    Array1,
+    ...Array2 //创建一个array不包含在其他给定数组中的值数组，SameValueZero用于相等比较。结果值的顺序和引用由第一个数组确定。
+  ) {
     let NewArray = [];
     let puArray = [];
     // let i=0
@@ -47,9 +49,10 @@ var fristnamecao = {
     //   }
     //   ++i
     // }
-    puArray = Array2.flat();
+    puArray = Array2.flat(); //展平数组
     for (let num of Array1) {
       if (!puArray.includes(num)) {
+        //判断是否存在该数
         NewArray.push(num);
       }
     }
@@ -57,12 +60,15 @@ var fristnamecao = {
     return NewArray;
   },
 
+  //array用valuefrom startup to 但不包括填充 的元素end。
   fill: function fill(array, value, start = 0, end = array.length) {
     for (; start < end; ++start) {
+      //从哪儿填充就从哪儿开始，然后end结束
       array[start] = value;
     }
     return array;
   },
+  //array使用n从开头删除的元素创建一个切片。
   drop: function drop(array, n = 1) {
     if (array.length < n) {
       return [];
@@ -71,11 +77,11 @@ var fristnamecao = {
       return array;
     }
     let NewArray = [];
-
+              //从哪儿开始就从哪儿开始赋值新的切片数组
     while (n < array.length) {
       NewArray.push(array[n]);
       n++;
     }
-    return NewArray
+    return NewArray;
   },
 };
