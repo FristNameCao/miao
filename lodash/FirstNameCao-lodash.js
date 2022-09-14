@@ -54,7 +54,10 @@ var fristnamecao = {
     return NewArray;
   },
 
-  differenceBy: function differenceBy(Array1,Array2){
-      let
-  }
+  fill: function fill(array, value, start = 0, end = array.length) {
+    for (; start < end; ++start) {
+      array[start]=value
+    }
+    return array
+  },
 };
