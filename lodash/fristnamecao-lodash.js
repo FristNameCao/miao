@@ -29,13 +29,7 @@ var fristnamecao = {
     //创建一个删除了所有假值的数组。值 false、 null、0、“”、 unDefinition 和 NaN 都是假值。
     let NewArray = [];
     for (let i = 0; i < Array.length; ++i) {
-      if (
-        Array[i] != "false" &&
-        Array[i] != "" &&
-        Array[i] != "0" &&
-        Array[i] != "undefined" &&
-        Array[i] != "NaN"
-      ) {
+      if (Array[i]) {
         NewArray.push(Array[i]);
       }
     }
