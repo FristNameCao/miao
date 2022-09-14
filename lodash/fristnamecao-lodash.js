@@ -76,5 +76,6 @@ var fristnamecao = {
       NewArray.push(array[n]);
       n++;
     }
+    return NewArray
   },
 };
