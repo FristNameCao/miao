@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>debugHTML</title>
+</head>
+
+<body>
+  <div id="odiv">debugHTML</div>
+
+  <script>
+    var odiv = document.getElementById("odiv")
+    var num = 0;
+    var timer = setInterval(() => {
+      num++;
+      console.log(num)
+      odiv.innerHTML = num
+      if (num === 5) {
+        clearTimeout(timer)
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>

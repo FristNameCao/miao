@@ -928,6 +928,7 @@ console.log(y.toFixed(3))
 </script>
 <script type="xxx" id="ch0105/17">
   var k = parseInt(Number(prompt()))
+
   var f1 = 1
   var f2 = 1
   if (k >= 1 && k <= 46) {
@@ -1277,17 +1278,19 @@ console.log(y.toFixed(3))
   var n = Number(prompt())
   var sum = 0
   var ref = 1
-  if (n > 1 && n < 12) {
-    for (var i = 1; i <= n; i++) {
-      // for (var j = 1; j <= i; j++) {
-      ref = i * ref
-      sum += ref
-      // console.log(i + '*' + j)
-      // }
+  jie = function () {
+    if (n > 1 && n < 12) {
+      for (var i = 1; i <= n; i++) {
+        // for (var j = 1; j <= i; j++) {
+        ref = i * ref
+        sum += ref
+        // console.log(i + '*' + j)
+        // }
+      }
+      return sum
     }
-    console.log(sum)
   }
-
+  console.log(jie())
 </script>
 <script type="xxx" id="ch0105/35">
   var n = Number(prompt())
@@ -1658,7 +1661,7 @@ console.log(y.toFixed(3))
 1*1+2*2+3*3 -->
 
 <script type="xxx" id="narcissistic">
-  var num = Number(prompt())
+  narcissistic=function (num) {
   var s = num
   var sum = 0
   while (num) {
@@ -1667,32 +1670,41 @@ console.log(y.toFixed(3))
     sum += Math.pow(ge, 3)
   }
   if (sum === s) {
-    console.log('YES')
+    return 'YES'
   }
   else {
-    console.log('NO')
+    return 'NO'
   }
+  }
+  var num = Number(prompt())
+  console.log( narcissistic(num))
+
 </script>
 
 <script type="xxx" id="narcissistics">
-  var sum
-  for (var i = 152; i < 10000; i++) {
-    var s = i
-    sum = 0
-    while (s) {
-      ge = s % 10
-      s = Math.floor(s / 10)
-      sum += Math.pow(ge, 3)
-    }
-    if (sum === i) {
-      console.log(sum)
+
+ narcissistics=function(){
+    var sum
+    for (var i = 152; i < 10000; i++) {
+      var s = i
+      sum = 0
+      while (s) {
+        ge = s % 10
+        s = Math.floor(s / 10)
+        sum += Math.pow(ge, 3)
+      }
+      if (sum === i) {
+        console.log(sum)
+      }
     }
   }
+  narcissistics()
+
+
 
 </script>
 <script id="palindrom">
-  debugger
-  
+
   var num = Number(prompt())
   var num2 = num
   var s = num
@@ -1722,5 +1734,17 @@ console.log(y.toFixed(3))
 
 <script id="weekday">
 
-
+  // if(year%4===0||year%400===0&&year%100!==0){
+  //   days=366
+  //   if(days===366){
+  //    switch(monday){
+  //     case 1:31
+  //    }
+  //   }
+  // }
 </script>
+
+
+
+
+
