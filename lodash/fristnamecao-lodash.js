@@ -30,13 +30,13 @@ var fristnamecao = {
     let NewArray = [];
     for (let i = 0; i < Array.length; ++i) {
       if (
-        Array[i] != false &&
+        Array[i] != "false" &&
         Array[i] != "" &&
-        Array[i] != 0 &&
-        Array[i] != undefined &&
-        Array[i] != NaN
+        Array[i] != "0" &&
+        Array[i] != "undefined" &&
+        Array[i] != "NaN"
       ) {
-        NewArray.push(NewArray[i]);
+        NewArray.push(Array[i]);
       }
     }
     return NewArray;
