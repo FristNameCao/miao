@@ -25,7 +25,7 @@ var fristnamecao = {
     return NewArray;
   },
 
-  compact:function compact (Array) {
+  compact: function compact(Array) {
     //创建一个删除了所有假值的数组。值 false、 null、0、“”、 unDefinition 和 NaN 都是假值。
     let NewArray = [];
     for (let i = 0; i < Array.length; ++i) {
@@ -53,4 +53,8 @@ var fristnamecao = {
 
     return NewArray;
   },
+
+  differenceBy: function differenceBy(Array1,Array2){
+
+  }
 };
