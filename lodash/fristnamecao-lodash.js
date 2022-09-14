@@ -11,7 +11,7 @@ var fristnamecao = {
     let Count = 0;
     for (let i = 0; i < Array.length; ++i) {
       OldArray.push(Array[i]);
-      count++;
+      Count++;
       if (Count == Size) {
         //只要长度够了就重置再来
         NewArray.push(OldArray);
