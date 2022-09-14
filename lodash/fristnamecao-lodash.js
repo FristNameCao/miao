@@ -36,17 +36,26 @@ var fristnamecao = {
     return NewArray;
   },
 
-  difference: function difference(Array1, Array2) {
-    let NewArray = [];
+  difference:function difference(Array1, ...Array2) {
+      debugger
+        let NewArray = [];
+        let puArray=[]
+        // let i=0
+        // while(isArray(Array2[i])){
+        //   for(let j=0;j< Array2[i].length;++j){
+        //       puArray.push(Array2[i][j])
+        //   }
+        //   ++i
+        // }
+        puArray =Array2.flat()
+        for (let num of Array1) {
+            if(!(puArray.includes(num))){
+                  NewArray.push(num)
+            }
+        }
 
-    for (let num of Array1) {
-      if (!Array2.includes(num)) {
-        NewArray.push(num);
-      }
-    }
-
-    return NewArray;
-  },
+        return NewArray;
+      },
 
   fill: function fill(array, value, start = 0, end = array.length) {
     for (; start < end; ++start) {
