@@ -88,24 +88,36 @@ var fristnamecao = {
 
   //展平数组
   flatten: function flatten(array) {
-    let NewArray = [];//展平的数组存放这里
-    let i=0//展品数组的每一个下标
-    while(i){
-      if (Array.isArray(array[i])) {//判断是不是数组
-        for (let j = 0; j < array[i].length; j++) {  //是数组就把这个数组里面内容都存放在之前定好的数组
+    let NewArray = []; //展平的数组存放这里
+    let i = 0; //展品数组的每一个下标
+    while (i) {
+      if (Array.isArray(array[i])) {
+        //判断是不是数组
+        for (let j = 0; j < array[i].length; j++) {
+          //是数组就把这个数组里面内容都存放在之前定好的数组
           NewArray.push(array[i][j]);
         }
-        i++
-        break//因为只需要展平一次，所以展平一次以后直接break
-      }else{
-        NewArray.push(array[i]);//不是数组就直接存放之前定好的数组
-        i++
+        i++;
+        break; //因为只需要展平一次，所以展平一次以后直接break
+      } else {
+        NewArray.push(array[i]); //不是数组就直接存放之前定好的数组
+        i++;
       }
     }
-    while(i<array.length){
-      NewArray.push(array[i]);//展平一次后继续把之前数组放到之前定好的数组
-      i++
+    while (i < array.length) {
+      NewArray.push(array[i]); //展平一次后继续把之前数组放到之前定好的数组
+      i++;
     }
     return NewArray;
+  },
+
+  flattenDeep: function flattenDeep(array) {
+
+    array.reduce((pre,cur)=>{
+
+      return pre.concat(Array.isArray(cur)?flattenDeep(cur):cur)
+
+    },[])
+
   },
 };
