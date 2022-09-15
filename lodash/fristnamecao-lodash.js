@@ -112,12 +112,14 @@ var fristnamecao = {
   },
 
   flattenDeep: function flattenDeep(array) {
-
-    array.reduce((pre,cur)=>{
-
-      return pre.concat(Array.isArray(cur)?flattenDeep(cur):cur)
-
-    },[])
-
+    array.reduce((pre, cur) => {
+      return pre.concat(Array.isArray(cur) ? flattenDeep(cur) : cur);
+    }, []);
   },
+
+  flattenDepth: function flattenDepth(array,depth){
+
+   return array.flat(depth)
+
+  }
 };
