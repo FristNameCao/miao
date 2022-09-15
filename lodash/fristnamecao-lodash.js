@@ -42,14 +42,14 @@ var fristnamecao = {
   ) {
     let NewArray = [];
     let puArray = [];
-    // let i=0
-    // while(isArray(Array2[i])){
-    //   for(let j=0;j< Array2[i].length;++j){
-    //       puArray.push(Array2[i][j])
-    //   }
-    //   ++i
-    // }
-    puArray = Array2.flat(); //展平数组
+    let i = 0;
+    while (Array2[i].isArray()) {
+      for (let j = 0; j < Array2[i].length; ++j) {
+        puArray.push(Array2[i][j]);
+      }
+      ++i;
+    }
+    // puArray = Array2.flat(); //展平数组
     for (let num of Array1) {
       if (!puArray.includes(num)) {
         //判断是否存在该数
@@ -77,10 +77,34 @@ var fristnamecao = {
       return array;
     }
     let NewArray = [];
-              //从哪儿开始就从哪儿开始赋值新的切片数组
+    //从哪儿开始就从哪儿开始赋值新的切片数组
     while (n < array.length) {
       NewArray.push(array[n]);
       n++;
+    }
+    return NewArray;
+  },
+  findIndex: function findIndex() {},
+
+  //展平数组
+  flatten: function flatten(array) {
+    let NewArray = [];//展平的数组存放这里
+    let i=0//展品数组的每一个下标
+    while(i){
+      if (Array.isArray(array[i])) {//判断是不是数组
+        for (let j = 0; j < array[i].length; j++) {  //是数组就把这个数组里面内容都存放在之前定好的数组
+          NewArray.push(array[i][j]);
+        }
+        i++
+        break//因为只需要展平一次，所以展平一次以后直接break
+      }else{
+        NewArray.push(array[i]);//不是数组就直接存放之前定好的数组
+        i++
+      }
+    }
+    while(i<array.length){
+      NewArray.push(array[i]);//展平一次后继续把之前数组放到之前定好的数组
+      i++
     }
     return NewArray;
   },
