@@ -144,4 +144,20 @@ var fristnamecao = {
     }
     return -1;
   },
+  lastIndexOf: function lastIndexOf(array, value, fromIndex) {
+    if (fromIndex) {
+      for (; fromIndex < array.length; fromIndex--) {
+        if (array[fromIndex] == value) {
+          return fromIndex;
+        }
+      }
+    } else {
+      for (let i = array.length - 1; i != 0; i--) {
+        if (array[i] == value) {
+          return i;
+        }
+      }
+    }
+    return -1;
+  },
 };
