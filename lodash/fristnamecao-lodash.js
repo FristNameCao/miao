@@ -117,9 +117,30 @@ var fristnamecao = {
     }, []);
   },
 
-  flattenDepth: function flattenDepth(array,depth){
+  flattenDepth: function flattenDepth(array, depth) {
+    return array.flat(depth);
+  },
+  head: function head(array) {
+    if (array.length == 0) {
+      return undefined;
+    }
+    return array[0];
+  },
 
-   return array.flat(depth)
-
-  }
+  indexOf: function indexOf(array, value, fromIndex) {
+    if (fromIndex) {
+      for (; fromIndex < array.length; ++fromIndex) {
+        if (array[fromIndex] == value) {
+          return fromIndex;
+        }
+      }
+    } else {
+      for (let i = 0; i < array.length; ++i) {
+        if (array[i] == value) {
+          return i;
+        }
+      }
+    }
+    return -1;
+  },
 };
