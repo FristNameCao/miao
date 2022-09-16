@@ -202,13 +202,17 @@ var fristnamecao = {
     }
     return array;
   },
-  every: (result = every((collection, predicate) => {
-    return collection == predicate;
-  })),
+  every:  function every(collection, predicate) {
 
-  some: (result = some((collection, predicate) => {
-    return collection == predicate;
-  })),
+    for (var i = 0; i < collection.length; i++) {
+      if (!(find(predicate, i, collection[i]))) {
+        return false
+      }
+    }
+    return true
+  },
+
+
 
   groupBy: function groupBy(collection, iteratee) {
     let obj = {};
