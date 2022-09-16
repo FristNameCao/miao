@@ -202,4 +202,9 @@ var fristnamecao = {
     }
     return array;
   },
+  every: function every(collection,predicate){
+       return (result = every((collection, predicate) => {
+            return  collection == predicate;
+       }));
+  }
 };
