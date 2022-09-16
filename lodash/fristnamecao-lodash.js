@@ -160,4 +160,13 @@ var fristnamecao = {
     }
     return -1;
   },
+  initial: function initial(array) {
+    return array.slice(0, array.length-1);
+  },
+  join: function join(array,separator=','){
+    let str=""
+    for(let num of array){
+      str=str+(num + separator);
+    }
+  },
 };
