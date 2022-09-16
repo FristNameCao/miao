@@ -168,10 +168,10 @@ var fristnamecao = {
   },
   join: function join(array, separator = ",") {
     let str = "";
-    for (let num of array) {
-      str = str + (num + separator);
+    for (let num = 0; num < array.length - 1; ++num) {
+      str = str + (array[num] + separator.toString());
     }
-    return str;
+    return str + array[array.length - 1];
   },
   last: function last(array) {
     return array[array.length - 1];
@@ -189,17 +189,17 @@ var fristnamecao = {
     }
     return NewArray;
   },
-  reverse: function reverse(array){
-    let i=0
-    let j=array.length-1
+  reverse: function reverse(array) {
+    let i = 0;
+    let j = array.length - 1;
 
-    while(i<j){
-      let temp = array[j]
-      array[j] = array[i]
+    while (i < j) {
+      let temp = array[j];
+      array[j] = array[i];
       array[i] = temp;
-      i++
-      j--
+      i++;
+      j--;
     }
     return array;
-  }
+  },
 };
