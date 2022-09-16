@@ -144,21 +144,23 @@ var fristnamecao = {
     }
     return -1;
   },
-  lastIndexOf: function lastIndexOf(array, value, fromIndex) {
-
-    if (fromIndex) {
-      for (; fromIndex < array.length; fromIndex--) {
-        if (array[fromIndex] == value) {
-          return fromIndex;
-        }
-      }
-    } else if (fromIndex>0) {
-      for (let i = array.length - 1; i > -1; i--) {
-        if (array[i] == value) {
-          return i;
-        }
-      }
+  lastIndexOf: function lastIndexOf(array, value, fromIndex=0) {
+    if (fromIndex<0){
+      return -1
     }
+      if (fromIndex) {
+        for (; fromIndex < array.length; fromIndex--) {
+          if (array[fromIndex] == value) {
+            return fromIndex;
+          }
+        }
+      } else {
+        for (let i = array.length - 1; i > -1; i--) {
+          if (array[i] == value) {
+            return i;
+          }
+        }
+      }
     return -1;
   },
   initial: function initial(array) {
@@ -169,6 +171,7 @@ var fristnamecao = {
     for (let num of array) {
       str = str + (num + separator);
     }
+    return str
   },
   last: function last(array) {
     return array[array.length - 1];
