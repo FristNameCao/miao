@@ -161,12 +161,29 @@ var fristnamecao = {
     return -1;
   },
   initial: function initial(array) {
-    return array.slice(0, array.length-1);
+    return array.slice(0, array.length - 1);
   },
-  join: function join(array,separator=','){
-    let str=""
-    for(let num of array){
-      str=str+(num + separator);
+  join: function join(array, separator = ",") {
+    let str = "";
+    for (let num of array) {
+      str = str + (num + separator);
     }
+  },
+  last: function last(array) {
+    return array[array.length - 1];
+  },
+  pull: function pull(array, ...value) {
+
+    let NewArray = [];
+    let i = 0;
+    while (i < array.length) {
+      if (value.includes(array[i])) {
+        ++i;
+      } else {
+        NewArray.push(array[i]);
+        ++i;
+      }
+    }
+    return NewArray;
   },
 };
