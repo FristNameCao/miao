@@ -144,23 +144,23 @@ var fristnamecao = {
     }
     return -1;
   },
-  lastIndexOf: function lastIndexOf(array, value, fromIndex=0) {
-    if (fromIndex<0){
-      return -1
+  lastIndexOf: function lastIndexOf(array, value, fromIndex = 0) {
+    if (fromIndex < 0) {
+      return -1;
     }
-      if (fromIndex) {
-        for (; fromIndex < array.length; fromIndex--) {
-          if (array[fromIndex] == value) {
-            return fromIndex;
-          }
-        }
-      } else {
-        for (let i = array.length - 1; i > -1; i--) {
-          if (array[i] == value) {
-            return i;
-          }
+    if (fromIndex) {
+      for (; fromIndex < array.length; fromIndex--) {
+        if (array[fromIndex] == value) {
+          return fromIndex;
         }
       }
+    } else {
+      for (let i = array.length - 1; i > -1; i--) {
+        if (array[i] == value) {
+          return i;
+        }
+      }
+    }
     return -1;
   },
   initial: function initial(array) {
@@ -171,13 +171,12 @@ var fristnamecao = {
     for (let num of array) {
       str = str + (num + separator);
     }
-    return str
+    return str;
   },
   last: function last(array) {
     return array[array.length - 1];
   },
   pull: function pull(array, ...value) {
-
     let NewArray = [];
     let i = 0;
     while (i < array.length) {
@@ -190,4 +189,17 @@ var fristnamecao = {
     }
     return NewArray;
   },
+  reverse: function reverse(array){
+    let i=0
+    let j=array.length-1
+
+    while(i<j){
+      let temp = array[j]
+      array[j] = array[i]
+      array[i] = temp;
+      i++
+      j--
+    }
+    return array;
+  }
 };
