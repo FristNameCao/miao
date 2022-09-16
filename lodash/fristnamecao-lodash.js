@@ -202,9 +202,29 @@ var fristnamecao = {
     }
     return array;
   },
-  every: function every(collection,predicate){
-       return (result = every((collection, predicate) => {
-            return  collection == predicate;
-       }));
-  }
+  every: (result = every((collection, predicate) => {
+    return collection == predicate;
+  })),
+
+  some: (result = some((collection, predicate) => {
+    return collection == predicate;
+  })),
+
+  groupBy: function groupBy(collection, iteratee) {
+    let obj = {};
+    for (let num of collection) {
+      if (!(num.iteratee in obj)) {
+        obj = num.iteratee;
+      }
+    }
+    let k = 0;
+    for (let i in obj) {
+      for (let j = 0; j < collection; ++j) {
+        if (obj.i == collection[j].iteratee) {
+          obj.i = collection[j];
+          j = k + 1;
+        }
+      }
+    }
+  },
 };
